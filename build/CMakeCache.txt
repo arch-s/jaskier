@@ -576,10 +576,43 @@ i2c_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/i2c
 image_transport_DIR:PATH=/opt/ros/melodic/share/image_transport/cmake
 
 //Value Computed by CMake
+jaskier_finger_adc_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/jaskier_finger_adc
+
+//Value Computed by CMake
+jaskier_finger_adc_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/jaskier_finger_adc
+
+//Value Computed by CMake
+jaskier_fingers_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/jaskier_fingers
+
+//Value Computed by CMake
+jaskier_fingers_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/jaskier_fingers
+
+//Value Computed by CMake
+jaskier_haptic_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/jaskier_haptic
+
+//Value Computed by CMake
+jaskier_haptic_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/jaskier_haptic
+
+//Value Computed by CMake
 jaskier_imu_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/jaskier_imu
 
 //Value Computed by CMake
 jaskier_imu_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/jaskier_imu
+
+//Value Computed by CMake
+jaskier_master_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/jaskier_master
+
+//Value Computed by CMake
+jaskier_master_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/jaskier_master
+
+//Value Computed by CMake
+jaskier_msgs_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/jaskier_msgs
+
+//The directory containing a CMake configuration file for jaskier_msgs.
+jaskier_msgs_DIR:PATH=/home/arch/catkin_ws/devel/share/jaskier_msgs/cmake
+
+//Value Computed by CMake
+jaskier_msgs_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/jaskier_msgs
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/librospack.so
@@ -876,7 +909,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=20
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=24
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

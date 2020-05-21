@@ -6,6 +6,10 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("jaskier_imu")
+subdirs("jaskier_msgs")
+subdirs("jaskier_fingers")
+subdirs("jaskier_haptic")
+subdirs("jaskier_master")
 subdirs("zed-ros-examples/examples/zed_ar_track_alvar_example")
 subdirs("zed-ros-examples/tutorials/zed_depth_sub_tutorial")
 subdirs("zed-ros-examples/zed_display_rviz")
