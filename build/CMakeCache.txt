@@ -614,8 +614,26 @@ jaskier_msgs_DIR:PATH=/home/arch/catkin_ws/devel/share/jaskier_msgs/cmake
 //Value Computed by CMake
 jaskier_msgs_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/jaskier_msgs
 
+//Value Computed by CMake
+jaskier_tf_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/jaskier_tf
+
+//Value Computed by CMake
+jaskier_tf_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/jaskier_tf
+
+//Value Computed by CMake
+jaskier_ultrasound_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/jaskier_ultrasound
+
+//Value Computed by CMake
+jaskier_ultrasound_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/jaskier_ultrasound
+
+//Value Computed by CMake
+jaskier_urdf_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/jaskier_urdf
+
+//Value Computed by CMake
+jaskier_urdf_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/jaskier_urdf
+
 //Path to a library.
-lib:FILEPATH=/opt/ros/melodic/lib/librospack.so
+lib:FILEPATH=/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
@@ -637,6 +655,9 @@ pluginlib_DIR:PATH=/opt/ros/melodic/share/pluginlib/cmake
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/melodic/share/rosconsole/cmake
+
+//The directory containing a CMake configuration file for rosconsole_bridge.
+rosconsole_bridge_DIR:PATH=/opt/ros/melodic/share/rosconsole_bridge/cmake
 
 //The directory containing a CMake configuration file for roscpp.
 roscpp_DIR:PATH=/opt/ros/melodic/share/roscpp/cmake
@@ -695,6 +716,12 @@ tf2_py_DIR:PATH=/opt/ros/melodic/share/tf2_py/cmake
 //The directory containing a CMake configuration file for tf2_ros.
 tf2_ros_DIR:PATH=/opt/ros/melodic/share/tf2_ros/cmake
 
+//The directory containing a CMake configuration file for tf.
+tf_DIR:PATH=/opt/ros/melodic/share/tf/cmake
+
+//The directory containing a CMake configuration file for urdf.
+urdf_DIR:PATH=/opt/ros/melodic/share/urdf/cmake
+
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/melodic/share/xmlrpcpp/cmake
 
@@ -746,6 +773,9 @@ zed_nodelet_example_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/zed-ros-examples/
 //Value Computed by CMake
 zed_nodelets_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/zed-ros-wrapper/zed_nodelets
 
+//The directory containing a CMake configuration file for zed_nodelets.
+zed_nodelets_DIR:PATH=/home/arch/catkin_ws/devel/share/zed_nodelets/cmake
+
 //Value Computed by CMake
 zed_nodelets_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/zed-ros-wrapper/zed_nodelets
 
@@ -787,6 +817,9 @@ zed_video_sub_tutorial_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/zed-ros-exampl
 
 //Value Computed by CMake
 zed_wrapper_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/zed-ros-wrapper/zed_wrapper
+
+//The directory containing a CMake configuration file for zed_wrapper.
+zed_wrapper_DIR:PATH=/home/arch/catkin_ws/devel/share/zed_wrapper/cmake
 
 //Value Computed by CMake
 zed_wrapper_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/zed-ros-wrapper/zed_wrapper
@@ -909,7 +942,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=24
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=27
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

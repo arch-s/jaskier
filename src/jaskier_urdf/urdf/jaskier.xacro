@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="jaskier">
+
+    <xacro:property name="base_x" value="0.08"/>
+    <xacro:property name="base_y" value="0.08"/>
+    <xacro:property name="base_z" value="0.02"/> 
+    <xacro:property name="base_xyz" value="${base_x} ${base_y} ${base_z}"/>
+
+    <xacro:property name="digit_radius" value="0.0075"/>
+
+    <xacro:property name="thumb_l" value="0.1"/>
+    <xacro:property name="thumb_o_x" value="-${base_x/2}"/>
+    <xacro:property name="thumb_o_y" value="-${base_y/2}"/>
+    <xacro:property name="thumb_o_r" value="-${pi/2}"/>
+    <xacro:property name="thumb_o_p" value="${pi/4}"/>
+    <xacro:property name="thumb_o_xyz" value="${thumb_o_x} ${thumb_o_y} 0"/>
+    <xacro:property name="thumb_o_rpy" value="${thumb_o_r} ${thumb_o_p} 0"/>
+    <xacro:macro name="thumb_o">
+            <origin xyz="${thumb_o_xyz}" rpy="${thumb_o_rpy}"/>
+    </xacro:macro>
+
+    <xacro:property name="index_l" value="0.1"/>
+    <xacro:property name="index_o_x" value="-${base_x/2}"/>
+    <xacro:property name="index_o_y" value="${base_y/2}"/>
+    <xacro:property name="index_o_r" value="0"/>
+    <xacro:property name="index_o_p" value="0"/>
+    <xacro:property name="index_o_xyz" value="${index_o_x} ${index_o_y} 0"/>
+    <xacro:property name="index_o_rpy" value="${index_o_r} ${index_o_p} 0"/>
+    <xacro:macro name="index_o">
+            <origin xyz="${index_o_xyz}" rpy="${index_o_rpy}"/>
+    </xacro:macro>
+
+    <xacro:property name="middle_l" value="0.1"/>
+    <xacro:property name="middle_o_y" value="${base_y/2}"/>
+    <xacro:property name="middle_o_x" value="-${base_x/6}"/>
+    <xacro:property name="middle_o_r" value="0"/>
+    <xacro:property name="middle_o_p" value="0"/>
+    <xacro:property name="middle_o_xyz" value="${middle_o_x} ${middle_o_y} 0"/>
+    <xacro:property name="middle_o_rpy" value="${middle_o_r} ${middle_o_p} 0"/>
+    <xacro:macro name="middle_o">
+            <origin xyz="${middle_o_xyz}" rpy="${middle_o_rpy}"/>
+    </xacro:macro>
+
+    <xacro:property name="ring_l" value="0.1"/>
+    <xacro:property name="ring_o_x" value="${base_x/6}"/>
+    <xacro:property name="ring_o_y" value="${base_y/2}"/>
+    <xacro:property name="ring_o_r" value="0"/>
+    <xacro:property name="ring_o_p" value="0"/>
+    <xacro:property name="ring_o_xyz" value="${ring_o_x} ${ring_o_y} 0"/>
+    <xacro:property name="ring_o_rpy" value="${ring_o_r} ${ring_o_p} 0"/>
+    <xacro:macro name="ring_o">
+            <origin xyz="${ring_o_xyz}" rpy="${ring_o_rpy}"/>
+    </xacro:macro>
+
+    <xacro:property name="little_l" value="0.1"/>
+    <xacro:property name="little_o_x" value="${base_x/2}"/>
+    <xacro:property name="little_o_y" value="${base_y/2}"/>
+    <xacro:property name="little_o_r" value="0"/>
+    <xacro:property name="little_o_p" value="0"/>
+    <xacro:property name="little_o_xyz" value="${little_o_x} ${little_o_y} 0"/>
+    <xacro:property name="little_o_rpy" value="${little_o_r} ${little_o_p} 0"/>
+    <xacro:macro name="little_o">
+            <origin xyz="${little_o_xyz}" rpy="${little_o_rpy}"/>
+    </xacro:macro>
+
+    <xacro:macro name="cyan">
+        <material name="cyan">
+            <color rgba="0 1.0 1.0 1.0"/>
+        </material>
+    </xacro:macro>
+
+    <xacro:macro name="joint_axis">
+        <axis xyz="0 1 0"/>
+    </xacro:macro>
+
+    <xacro:macro name="joint_limit">
+        <limit effort="0.0" velocity="20" lower="0.0" upper="1.8"/>
+    </xacro:macro>
+     
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <box size="${base_x} ${base_y} ${base_z}"/>
+            </geometry>
+            <material name="Magenta">
+                <color rgba="1.0 0 1.0 1.0"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="thumb">   
+        <visual>
+            <geometry>
+                <cylinder length="${thumb_l}" radius="${digit_radius}"/>
+            </geometry>
+            <xacro:thumb_o/>
+            <xacro:cyan/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <sphere radius="${digit_radius}"/>
+            </geometry>
+            <origin xyz="0 ${thumb_l} 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="index">   
+        <visual>
+            <geometry>
+                <cylinder length="${index_l}" radius="${digit_radius}"/>
+            </geometry>
+            <xacro:index_o/>
+            <xacro:cyan/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <sphere radius="${digit_radius}"/>
+            </geometry>
+            <origin xyz="0 ${index_l} 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="middle">   
+        <visual>
+            <geometry>
+                <cylinder length="${middle_l}" radius="${digit_radius}"/>
+            </geometry>
+            <xacro:middle_o/>
+            <xacro:cyan/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <sphere radius="${digit_radius}"/>
+            </geometry>
+            <origin xyz="0 ${middle_l} 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="ring">   
+        <visual>
+            <geometry>
+                <cylinder length="${ring_l}" radius="${digit_radius}"/>
+            </geometry>
+            <xacro:ring_o/>
+            <xacro:cyan/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <sphere radius="${digit_radius}"/>
+            </geometry>
+            <origin xyz="0 ${ring_l} 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <link name="little">   
+        <visual>
+            <geometry>
+                <cylinder length="${little_l}" radius="${digit_radius}"/>
+            </geometry>
+            <xacro:little_o/>
+            <xacro:cyan/>
+        </visual>
+
+        <collision>
+            <geometry>
+                <sphere radius="${digit_radius}"/>
+            </geometry>
+            <origin xyz="0 ${little_l} 0" rpy="0 0 0"/>
+        </collision>
+    </link>
+ 
+    <joint name="thumb_joint" type="revolute">
+        <parent link="base_link"/>
+        <child link="thumb"/>
+        <xacro:joint_axis/>
+        <xacro:joint_limit/>
+        <xacro:thumb_o/>
+    </joint>
+     
+    <joint name="index_joint" type="revolute">
+        <parent link="base_link"/>
+        <child link="index"/>
+        <xacro:joint_axis/>
+        <xacro:joint_limit/>
+        <xacro:index_o/>
+    </joint>
+
+    <joint name="middle_joint" type="revolute">
+        <parent link="base_link"/>
+        <child link="middle"/>
+        <xacro:joint_axis/>
+        <xacro:joint_limit/>
+        <xacro:middle_o/>
+    </joint>
+
+    <joint name="ring_joint" type="revolute">
+        <parent link="base_link"/>
+        <child link="ring"/>
+        <xacro:joint_axis/>
+        <xacro:joint_limit/>
+        <xacro:ring_o/>
+    </joint>
+
+    <joint name="little_joint" type="revolute">
+        <parent link="base_link"/>
+        <child link="little"/>
+        <xacro:joint_axis/>
+        <xacro:joint_limit/>
+        <xacro:little_o/>
+    </joint>
+
+</robot>

@@ -1779,6 +1779,71 @@ zed_wrapper_node/fast:
 	$(MAKE) -f zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_node.dir/build.make zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_node.dir/build
 .PHONY : zed_wrapper_node/fast
 
+#=============================================================================
+# Target rules for targets named tf_generate_messages_eus
+
+# Build rule for target.
+tf_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_eus
+.PHONY : tf_generate_messages_eus
+
+# fast build rule for target.
+tf_generate_messages_eus/fast:
+	$(MAKE) -f jaskier_tf/CMakeFiles/tf_generate_messages_eus.dir/build.make jaskier_tf/CMakeFiles/tf_generate_messages_eus.dir/build
+.PHONY : tf_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named tf_generate_messages_cpp
+
+# Build rule for target.
+tf_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_cpp
+.PHONY : tf_generate_messages_cpp
+
+# fast build rule for target.
+tf_generate_messages_cpp/fast:
+	$(MAKE) -f jaskier_tf/CMakeFiles/tf_generate_messages_cpp.dir/build.make jaskier_tf/CMakeFiles/tf_generate_messages_cpp.dir/build
+.PHONY : tf_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named tf_generate_messages_py
+
+# Build rule for target.
+tf_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_py
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	$(MAKE) -f jaskier_tf/CMakeFiles/tf_generate_messages_py.dir/build.make jaskier_tf/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named tf_generate_messages_lisp
+
+# Build rule for target.
+tf_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_lisp
+.PHONY : tf_generate_messages_lisp
+
+# fast build rule for target.
+tf_generate_messages_lisp/fast:
+	$(MAKE) -f jaskier_tf/CMakeFiles/tf_generate_messages_lisp.dir/build.make jaskier_tf/CMakeFiles/tf_generate_messages_lisp.dir/build
+.PHONY : tf_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named tf_generate_messages_nodejs
+
+# Build rule for target.
+tf_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_generate_messages_nodejs
+.PHONY : tf_generate_messages_nodejs
+
+# fast build rule for target.
+tf_generate_messages_nodejs/fast:
+	$(MAKE) -f jaskier_tf/CMakeFiles/tf_generate_messages_nodejs.dir/build.make jaskier_tf/CMakeFiles/tf_generate_messages_nodejs.dir/build
+.PHONY : tf_generate_messages_nodejs/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1916,6 +1981,11 @@ help:
 	@echo "... zed_video_sub"
 	@echo "... all_files_zed_wrapper"
 	@echo "... zed_wrapper_node"
+	@echo "... tf_generate_messages_eus"
+	@echo "... tf_generate_messages_cpp"
+	@echo "... tf_generate_messages_py"
+	@echo "... tf_generate_messages_lisp"
+	@echo "... tf_generate_messages_nodejs"
 .PHONY : help
 
 

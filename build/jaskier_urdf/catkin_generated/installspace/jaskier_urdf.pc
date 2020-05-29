@@ -1,0 +1,8 @@
+prefix=/home/arch/catkin_ws/install
+
+Name: jaskier_urdf
+Description: Description of jaskier_urdf
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

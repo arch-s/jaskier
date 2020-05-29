@@ -16,10 +16,6 @@ FREQ = 100
 DUTY = 0x4000
 ADDR = 0x5f
 
-pca = PCA.PCA9685(i2c, address=ADDR)
-pca.frequency = FREQ
-index = pca.channels[0]
-index.duty_cycle = duty_cycle
 
 class pwm:
     def __init__(self):
@@ -29,6 +25,7 @@ class pwm:
         self.duty = [0, 0, 0, 0, 0]
         self.i2c = busio.I2C(board.SCL, board.SDA)
         self.pca = PCA.PCA9685(self.i2c, address=self.addr)
+        self.pca.frequency = self.freq
         self.fingers = self.pca.channels[0:4]
 
     def hapticCallback(self, data):
