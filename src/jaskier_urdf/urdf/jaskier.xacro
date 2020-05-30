@@ -11,8 +11,8 @@
     <xacro:property name="thumb_l" value="0.1"/>
     <xacro:property name="thumb_o_x" value="-${base_x/2}"/>
     <xacro:property name="thumb_o_y" value="-${base_y/2}"/>
-    <xacro:property name="thumb_o_r" value="1"/>
-    <xacro:property name="thumb_o_p" value="0.4"/>
+    <xacro:property name="thumb_o_r" value="0.9"/>
+    <xacro:property name="thumb_o_p" value="0.6"/>
     <xacro:property name="thumb_o_xyz" value="${thumb_o_x} ${thumb_o_y} 0"/>
     <xacro:property name="thumb_o_rpy" value="${thumb_o_r} ${thumb_o_p} 0"/>
     <xacro:macro name="thumb_o">
