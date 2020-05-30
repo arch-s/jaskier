@@ -11,57 +11,87 @@
     <xacro:property name="thumb_l" value="0.1"/>
     <xacro:property name="thumb_o_x" value="-${base_x/2}"/>
     <xacro:property name="thumb_o_y" value="-${base_y/2}"/>
-    <xacro:property name="thumb_o_r" value="-${pi/2}"/>
-    <xacro:property name="thumb_o_p" value="${pi/4}"/>
+    <xacro:property name="thumb_o_r" value="1"/>
+    <xacro:property name="thumb_o_p" value="0.4"/>
     <xacro:property name="thumb_o_xyz" value="${thumb_o_x} ${thumb_o_y} 0"/>
     <xacro:property name="thumb_o_rpy" value="${thumb_o_r} ${thumb_o_p} 0"/>
     <xacro:macro name="thumb_o">
-            <origin xyz="${thumb_o_xyz}" rpy="${thumb_o_rpy}"/>
+			<origin xyz="${thumb_o_xyz}" rpy="${thumb_o_rpy}"/>
     </xacro:macro>
+	<xacro:macro name="thumb_vis_o">
+			<origin xyz="0 0 -${thumb_l/2}" rpy="0 0 0"/>
+	</xacro:macro>
+	<xacro:macro name="thumb_col_o">
+			<origin xyz="0 0 -${thumb_l}" rpy="0 0 0"/>
+	</xacro:macro>
 
     <xacro:property name="index_l" value="0.1"/>
     <xacro:property name="index_o_x" value="-${base_x/2}"/>
     <xacro:property name="index_o_y" value="${base_y/2}"/>
-    <xacro:property name="index_o_r" value="0"/>
+    <xacro:property name="index_o_r" value="${pi/2}"/>
     <xacro:property name="index_o_p" value="0"/>
     <xacro:property name="index_o_xyz" value="${index_o_x} ${index_o_y} 0"/>
     <xacro:property name="index_o_rpy" value="${index_o_r} ${index_o_p} 0"/>
     <xacro:macro name="index_o">
             <origin xyz="${index_o_xyz}" rpy="${index_o_rpy}"/>
     </xacro:macro>
+	<xacro:macro name="index_vis_o">
+			<origin xyz="0 0 -${index_l/2}" rpy="0 0 0"/>
+	</xacro:macro>
+	<xacro:macro name="index_col_o">
+			<origin xyz="0 0 -${index_l}" rpy="0 0 0"/>
+	</xacro:macro>
 
     <xacro:property name="middle_l" value="0.1"/>
+	<xacro:property name="middle_o_x" value="-${base_x/6}"/>
     <xacro:property name="middle_o_y" value="${base_y/2}"/>
-    <xacro:property name="middle_o_x" value="-${base_x/6}"/>
-    <xacro:property name="middle_o_r" value="0"/>
+    <xacro:property name="middle_o_r" value="${pi/2}"/>
     <xacro:property name="middle_o_p" value="0"/>
     <xacro:property name="middle_o_xyz" value="${middle_o_x} ${middle_o_y} 0"/>
     <xacro:property name="middle_o_rpy" value="${middle_o_r} ${middle_o_p} 0"/>
     <xacro:macro name="middle_o">
             <origin xyz="${middle_o_xyz}" rpy="${middle_o_rpy}"/>
     </xacro:macro>
+	<xacro:macro name="middle_vis_o">
+			<origin xyz="0 0 -${middle_l/2}" rpy="0 0 0"/>
+	</xacro:macro>
+	<xacro:macro name="middle_col_o">
+			<origin xyz="0 0 -${middle_l}" rpy="0 0 0"/>
+	</xacro:macro>
 
     <xacro:property name="ring_l" value="0.1"/>
     <xacro:property name="ring_o_x" value="${base_x/6}"/>
     <xacro:property name="ring_o_y" value="${base_y/2}"/>
-    <xacro:property name="ring_o_r" value="0"/>
+    <xacro:property name="ring_o_r" value="${pi/2}"/>
     <xacro:property name="ring_o_p" value="0"/>
     <xacro:property name="ring_o_xyz" value="${ring_o_x} ${ring_o_y} 0"/>
     <xacro:property name="ring_o_rpy" value="${ring_o_r} ${ring_o_p} 0"/>
     <xacro:macro name="ring_o">
             <origin xyz="${ring_o_xyz}" rpy="${ring_o_rpy}"/>
     </xacro:macro>
+	<xacro:macro name="ring_vis_o">
+			<origin xyz="0 0 -${ring_l/2}" rpy="0 0 0"/>
+	</xacro:macro>
+	<xacro:macro name="ring_col_o">
+			<origin xyz="0 0 -${ring_l}" rpy="0 0 0"/>
+	</xacro:macro>
 
     <xacro:property name="little_l" value="0.1"/>
     <xacro:property name="little_o_x" value="${base_x/2}"/>
     <xacro:property name="little_o_y" value="${base_y/2}"/>
-    <xacro:property name="little_o_r" value="0"/>
+    <xacro:property name="little_o_r" value="${pi/2}"/>
     <xacro:property name="little_o_p" value="0"/>
     <xacro:property name="little_o_xyz" value="${little_o_x} ${little_o_y} 0"/>
     <xacro:property name="little_o_rpy" value="${little_o_r} ${little_o_p} 0"/>
     <xacro:macro name="little_o">
             <origin xyz="${little_o_xyz}" rpy="${little_o_rpy}"/>
     </xacro:macro>
+	<xacro:macro name="little_vis_o">
+			<origin xyz="0 0 -${little_l/2}" rpy="0 0 0"/>
+	</xacro:macro>
+	<xacro:macro name="little_col_o">
+			<origin xyz="0 0 -${little_l}" rpy="0 0 0"/>
+	</xacro:macro>
 
     <xacro:macro name="cyan">
         <material name="cyan">
@@ -70,11 +100,11 @@
     </xacro:macro>
 
     <xacro:macro name="joint_axis">
-        <axis xyz="0 1 0"/>
+        <axis xyz="1 0 0"/>
     </xacro:macro>
 
     <xacro:macro name="joint_limit">
-        <limit effort="0.0" velocity="20" lower="0.0" upper="1.8"/>
+        <limit effort="0.0" velocity="20" lower="-1.8" upper="0"/>
     </xacro:macro>
      
     <link name="base_link">
@@ -93,7 +123,7 @@
             <geometry>
                 <cylinder length="${thumb_l}" radius="${digit_radius}"/>
             </geometry>
-            <xacro:thumb_o/>
+            <xacro:thumb_vis_o/>
             <xacro:cyan/>
         </visual>
 
@@ -101,7 +131,7 @@
             <geometry>
                 <sphere radius="${digit_radius}"/>
             </geometry>
-            <origin xyz="0 ${thumb_l} 0" rpy="0 0 0"/>
+            <xacro:thumb_col_o/>
         </collision>
     </link>
 
@@ -110,7 +140,7 @@
             <geometry>
                 <cylinder length="${index_l}" radius="${digit_radius}"/>
             </geometry>
-            <xacro:index_o/>
+            <xacro:index_vis_o/>
             <xacro:cyan/>
         </visual>
 
@@ -118,7 +148,7 @@
             <geometry>
                 <sphere radius="${digit_radius}"/>
             </geometry>
-            <origin xyz="0 ${index_l} 0" rpy="0 0 0"/>
+            <xacro:index_col_o/>
         </collision>
     </link>
 
@@ -127,7 +157,7 @@
             <geometry>
                 <cylinder length="${middle_l}" radius="${digit_radius}"/>
             </geometry>
-            <xacro:middle_o/>
+            <xacro:middle_vis_o/>
             <xacro:cyan/>
         </visual>
 
@@ -135,7 +165,7 @@
             <geometry>
                 <sphere radius="${digit_radius}"/>
             </geometry>
-            <origin xyz="0 ${middle_l} 0" rpy="0 0 0"/>
+            <xacro:middle_col_o/>
         </collision>
     </link>
 
@@ -144,7 +174,7 @@
             <geometry>
                 <cylinder length="${ring_l}" radius="${digit_radius}"/>
             </geometry>
-            <xacro:ring_o/>
+            <xacro:ring_vis_o/>
             <xacro:cyan/>
         </visual>
 
@@ -152,7 +182,7 @@
             <geometry>
                 <sphere radius="${digit_radius}"/>
             </geometry>
-            <origin xyz="0 ${ring_l} 0" rpy="0 0 0"/>
+            <xacro:ring_col_o/>
         </collision>
     </link>
 
@@ -161,7 +191,7 @@
             <geometry>
                 <cylinder length="${little_l}" radius="${digit_radius}"/>
             </geometry>
-            <xacro:little_o/>
+            <xacro:little_vis_o/>
             <xacro:cyan/>
         </visual>
 
@@ -169,14 +199,14 @@
             <geometry>
                 <sphere radius="${digit_radius}"/>
             </geometry>
-            <origin xyz="0 ${little_l} 0" rpy="0 0 0"/>
+            <xacro:little_col_o/>
         </collision>
     </link>
  
     <joint name="thumb_joint" type="revolute">
         <parent link="base_link"/>
         <child link="thumb"/>
-        <xacro:joint_axis/>
+        <axis xyz="0 1 0"/>
         <xacro:joint_limit/>
         <xacro:thumb_o/>
     </joint>
