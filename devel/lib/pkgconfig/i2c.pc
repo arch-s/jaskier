@@ -1,8 +1,0 @@
-prefix=/home/arch/catkin_ws/devel
-
-Name: i2c
-Description: Description of i2c
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

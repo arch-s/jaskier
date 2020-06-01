@@ -9,7 +9,6 @@ project(jaskier_fingers)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   jaskier_msgs
-  roscpp
   rospy
   std_msgs
 )
@@ -106,7 +105,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES jaskier_fingers
-#  CATKIN_DEPENDS jaskier_msgs roscpp rospy std_msgs
+#  CATKIN_DEPENDS jaskier_msgs rospy std_msgs
 #  DEPENDS system_lib
 )
 

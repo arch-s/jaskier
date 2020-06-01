@@ -4,5 +4,5 @@ Name: jaskier_msgs
 Description: Description of jaskier_msgs
 Version: 0.0.0
 Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -ljaskier_msgs
+Libs: -L${prefix}/lib 
 Requires: geometry_msgs sensor_msgs std_msgs message_runtime

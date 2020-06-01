@@ -108,7 +108,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-  LIBRARIES jaskier_msgs
+#  LIBRARIES jaskier_msgs
   CATKIN_DEPENDS geometry_msgs sensor_msgs std_msgs message_runtime
 #  DEPENDS system_lib
 )

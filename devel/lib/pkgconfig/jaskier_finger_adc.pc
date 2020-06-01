@@ -1,8 +1,0 @@
-prefix=/home/arch/catkin_ws/devel
-
-Name: jaskier_finger_adc
-Description: Description of jaskier_finger_adc
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

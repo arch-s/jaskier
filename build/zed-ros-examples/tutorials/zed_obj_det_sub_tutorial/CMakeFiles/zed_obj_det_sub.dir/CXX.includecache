@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/arch/catkin_ws/install/include/zed_interfaces/ObjectStamped.h
+/home/arch/catkin_ws/devel/include/zed_interfaces/ObjectStamped.h
 string
 -
 vector
@@ -32,7 +32,7 @@ geometry_msgs/Point32.h
 geometry_msgs/Point32.h
 -
 
-/home/arch/catkin_ws/install/include/zed_interfaces/Objects.h
+/home/arch/catkin_ws/devel/include/zed_interfaces/Objects.h
 string
 -
 vector

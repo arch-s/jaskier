@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -DNDEBUG
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"zed_obj_det_sub_tutorial\"
 
-CXX_INCLUDES = -I/home/arch/catkin_ws/src/zed-ros-examples/tutorials/zed_obj_det_sub_tutorial/include -I/home/arch/catkin_ws/install/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/arch/catkin_ws/src/zed-ros-examples/tutorials/zed_obj_det_sub_tutorial/include -I/home/arch/catkin_ws/devel/include -I/home/arch/catkin_ws/src/zed-ros-wrapper/zed_interfaces/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 
