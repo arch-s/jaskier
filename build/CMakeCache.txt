@@ -447,7 +447,7 @@ UBUNTU:BOOL=TRUE
 UBUNTU_BIONIC:BOOL=TRUE
 
 //Dependencies for the target
-ZEDNodelets_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libimage_transport.so;general;/opt/ros/melodic/lib/libnodeletlib.so;general;/opt/ros/melodic/lib/libbondcpp.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython2.7.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/liborocos-kdl.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so;general;/usr/lib/aarch64-linux-gnu/libboost_atomic.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;debug;/usr/local/zed/lib/libsl_zed.so;optimized;/usr/local/zed/lib/libsl_zed.so;general;/usr/lib/aarch64-linux-gnu/libopenblas.so;general;/usr/lib/aarch64-linux-gnu/libusb-1.0.so;general;/usr/local/cuda/lib64/libcudart.so;
+ZEDNodelets_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libimage_transport.so;general;/opt/ros/melodic/lib/libnodeletlib.so;general;/opt/ros/melodic/lib/libbondcpp.so;general;/usr/lib/aarch64-linux-gnu/libuuid.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/aarch64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/aarch64-linux-gnu/libpython2.7.so;general;/usr/lib/aarch64-linux-gnu/libboost_program_options.so;general;/usr/lib/aarch64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/liborocos-kdl.so;general;/opt/ros/melodic/lib/liborocos-kdl.so.1.4.0;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/aarch64-linux-gnu/liblog4cxx.so;general;/usr/lib/aarch64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/aarch64-linux-gnu/libboost_system.so;general;/usr/lib/aarch64-linux-gnu/libboost_thread.so;general;/usr/lib/aarch64-linux-gnu/libboost_chrono.so;general;/usr/lib/aarch64-linux-gnu/libboost_date_time.so;general;/usr/lib/aarch64-linux-gnu/libboost_atomic.so;general;/usr/lib/aarch64-linux-gnu/libpthread.so;general;/usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4;debug;/usr/local/zed/lib/libsl_zed.so;optimized;/usr/local/zed/lib/libsl_zed.so;general;/usr/lib/aarch64-linux-gnu/libopenblas.so;general;/usr/lib/aarch64-linux-gnu/libusb-1.0.so;general;/usr/local/cuda/lib64/libcudart.so;
 
 //The directory containing a CMake configuration file for ZED.
 ZED_DIR:PATH=/usr/local/zed
@@ -600,6 +600,12 @@ jaskier_imu_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/jaskier_imu
 jaskier_imu_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/jaskier_imu
 
 //Value Computed by CMake
+jaskier_joint_state_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/jaskier_joint_state
+
+//Value Computed by CMake
+jaskier_joint_state_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/jaskier_joint_state
+
+//Value Computed by CMake
 jaskier_master_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/jaskier_master
 
 //Value Computed by CMake
@@ -609,7 +615,7 @@ jaskier_master_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/jaskier_master
 jaskier_msgs_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/jaskier_msgs
 
 //The directory containing a CMake configuration file for jaskier_msgs.
-jaskier_msgs_DIR:PATH=/home/arch/catkin_ws/devel/share/jaskier_msgs/cmake
+jaskier_msgs_DIR:PATH=/home/arch/catkin_ws/install/share/jaskier_msgs/cmake
 
 //Value Computed by CMake
 jaskier_msgs_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/jaskier_msgs
@@ -753,7 +759,7 @@ zed_examples_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/zed-ros-examples/zed_exa
 zed_interfaces_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/zed-ros-wrapper/zed_interfaces
 
 //The directory containing a CMake configuration file for zed_interfaces.
-zed_interfaces_DIR:PATH=/home/arch/catkin_ws/devel/share/zed_interfaces/cmake
+zed_interfaces_DIR:PATH=/home/arch/catkin_ws/install/share/zed_interfaces/cmake
 
 //Value Computed by CMake
 zed_interfaces_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/zed-ros-wrapper/zed_interfaces
@@ -774,7 +780,7 @@ zed_nodelet_example_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/zed-ros-examples/
 zed_nodelets_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/zed-ros-wrapper/zed_nodelets
 
 //The directory containing a CMake configuration file for zed_nodelets.
-zed_nodelets_DIR:PATH=/home/arch/catkin_ws/devel/share/zed_nodelets/cmake
+zed_nodelets_DIR:PATH=/home/arch/catkin_ws/install/share/zed_nodelets/cmake
 
 //Value Computed by CMake
 zed_nodelets_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/zed-ros-wrapper/zed_nodelets
@@ -819,7 +825,7 @@ zed_video_sub_tutorial_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/zed-ros-exampl
 zed_wrapper_BINARY_DIR:STATIC=/home/arch/catkin_ws/build/zed-ros-wrapper/zed_wrapper
 
 //The directory containing a CMake configuration file for zed_wrapper.
-zed_wrapper_DIR:PATH=/home/arch/catkin_ws/devel/share/zed_wrapper/cmake
+zed_wrapper_DIR:PATH=/home/arch/catkin_ws/install/share/zed_wrapper/cmake
 
 //Value Computed by CMake
 zed_wrapper_SOURCE_DIR:STATIC=/home/arch/catkin_ws/src/zed-ros-wrapper/zed_wrapper
@@ -942,7 +948,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=27
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=28
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -171,6 +171,7 @@ ZEDNodelets_EXTERNAL_OBJECTS =
 /home/arch/catkin_ws/devel/lib/libZEDNodelets.so: /opt/ros/melodic/lib/libimage_transport.so
 /home/arch/catkin_ws/devel/lib/libZEDNodelets.so: /opt/ros/melodic/lib/libnodeletlib.so
 /home/arch/catkin_ws/devel/lib/libZEDNodelets.so: /opt/ros/melodic/lib/libbondcpp.so
+/home/arch/catkin_ws/devel/lib/libZEDNodelets.so: /usr/lib/aarch64-linux-gnu/libuuid.so
 /home/arch/catkin_ws/devel/lib/libZEDNodelets.so: /opt/ros/melodic/lib/libclass_loader.so
 /home/arch/catkin_ws/devel/lib/libZEDNodelets.so: /usr/lib/libPocoFoundation.so
 /home/arch/catkin_ws/devel/lib/libZEDNodelets.so: /usr/lib/aarch64-linux-gnu/libdl.so

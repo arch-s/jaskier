@@ -92,6 +92,7 @@ zed_wrapper_node_EXTERNAL_OBJECTS =
 /home/arch/catkin_ws/devel/lib/zed_wrapper/zed_wrapper_node: zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_node.dir/build.make
 /home/arch/catkin_ws/devel/lib/zed_wrapper/zed_wrapper_node: /opt/ros/melodic/lib/libnodeletlib.so
 /home/arch/catkin_ws/devel/lib/zed_wrapper/zed_wrapper_node: /opt/ros/melodic/lib/libbondcpp.so
+/home/arch/catkin_ws/devel/lib/zed_wrapper/zed_wrapper_node: /usr/lib/aarch64-linux-gnu/libuuid.so
 /home/arch/catkin_ws/devel/lib/zed_wrapper/zed_wrapper_node: /opt/ros/melodic/lib/libclass_loader.so
 /home/arch/catkin_ws/devel/lib/zed_wrapper/zed_wrapper_node: /usr/lib/libPocoFoundation.so
 /home/arch/catkin_ws/devel/lib/zed_wrapper/zed_wrapper_node: /usr/lib/aarch64-linux-gnu/libdl.so

@@ -19,7 +19,7 @@
       <geometry>
         <cylinder length="0.1" radius="0.0075"/>
       </geometry>
-      <origin rpy="-1.57079632679 0.785398163397 0" xyz="-0.04 -0.04 0"/>
+      <origin rpy="0 0 0" xyz="0 0 -0.05"/>
       <material name="cyan">
         <color rgba="0 1.0 1.0 1.0"/>
       </material>
@@ -28,7 +28,7 @@
       <geometry>
         <sphere radius="0.0075"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0 0.1 0"/>
+      <origin rpy="0 0 0" xyz="0 0 -0.1"/>
     </collision>
   </link>
   <link name="index">
@@ -36,7 +36,7 @@
       <geometry>
         <cylinder length="0.1" radius="0.0075"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="-0.04 0.04 0"/>
+      <origin rpy="0 0 0" xyz="0 0 -0.05"/>
       <material name="cyan">
         <color rgba="0 1.0 1.0 1.0"/>
       </material>
@@ -45,7 +45,7 @@
       <geometry>
         <sphere radius="0.0075"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0 0.1 0"/>
+      <origin rpy="0 0 0" xyz="0 0 -0.1"/>
     </collision>
   </link>
   <link name="middle">
@@ -53,7 +53,7 @@
       <geometry>
         <cylinder length="0.1" radius="0.0075"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="-0.0133333333333 0.04 0"/>
+      <origin rpy="0 0 0" xyz="0 0 -0.05"/>
       <material name="cyan">
         <color rgba="0 1.0 1.0 1.0"/>
       </material>
@@ -62,7 +62,7 @@
       <geometry>
         <sphere radius="0.0075"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0 0.1 0"/>
+      <origin rpy="0 0 0" xyz="0 0 -0.1"/>
     </collision>
   </link>
   <link name="ring">
@@ -70,7 +70,7 @@
       <geometry>
         <cylinder length="0.1" radius="0.0075"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.0133333333333 0.04 0"/>
+      <origin rpy="0 0 0" xyz="0 0 -0.05"/>
       <material name="cyan">
         <color rgba="0 1.0 1.0 1.0"/>
       </material>
@@ -79,7 +79,7 @@
       <geometry>
         <sphere radius="0.0075"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0 0.1 0"/>
+      <origin rpy="0 0 0" xyz="0 0 -0.1"/>
     </collision>
   </link>
   <link name="little">
@@ -87,7 +87,7 @@
       <geometry>
         <cylinder length="0.1" radius="0.0075"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0.04 0.04 0"/>
+      <origin rpy="0 0 0" xyz="0 0 -0.05"/>
       <material name="cyan">
         <color rgba="0 1.0 1.0 1.0"/>
       </material>
@@ -96,43 +96,43 @@
       <geometry>
         <sphere radius="0.0075"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0 0.1 0"/>
+      <origin rpy="0 0 0" xyz="0 0 -0.1"/>
     </collision>
   </link>
   <joint name="thumb_joint" type="revolute">
     <parent link="base_link"/>
     <child link="thumb"/>
     <axis xyz="0 1 0"/>
-    <limit effort="0.0" lower="0.0" upper="1.8" velocity="20"/>
-    <origin rpy="-1.57079632679 0.785398163397 0" xyz="-0.04 -0.04 0"/>
+    <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
+    <origin rpy="0.9 0.6 0" xyz="-0.04 -0.04 0"/>
   </joint>
   <joint name="index_joint" type="revolute">
     <parent link="base_link"/>
     <child link="index"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="0.0" lower="0.0" upper="1.8" velocity="20"/>
-    <origin rpy="0 0 0" xyz="-0.04 0.04 0"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
+    <origin rpy="1.57079632679 0 0" xyz="-0.04 0.04 0"/>
   </joint>
   <joint name="middle_joint" type="revolute">
     <parent link="base_link"/>
     <child link="middle"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="0.0" lower="0.0" upper="1.8" velocity="20"/>
-    <origin rpy="0 0 0" xyz="-0.0133333333333 0.04 0"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
+    <origin rpy="1.57079632679 0 0" xyz="-0.0133333333333 0.04 0"/>
   </joint>
   <joint name="ring_joint" type="revolute">
     <parent link="base_link"/>
     <child link="ring"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="0.0" lower="0.0" upper="1.8" velocity="20"/>
-    <origin rpy="0 0 0" xyz="0.0133333333333 0.04 0"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
+    <origin rpy="1.57079632679 0 0" xyz="0.0133333333333 0.04 0"/>
   </joint>
   <joint name="little_joint" type="revolute">
     <parent link="base_link"/>
     <child link="little"/>
-    <axis xyz="0 1 0"/>
-    <limit effort="0.0" lower="0.0" upper="1.8" velocity="20"/>
-    <origin rpy="0 0 0" xyz="0.04 0.04 0"/>
+    <axis xyz="1 0 0"/>
+    <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
+    <origin rpy="1.57079632679 0 0" xyz="0.04 0.04 0"/>
   </joint>
 </robot>
 

@@ -1,4 +1,7 @@
 # Hashes of file build rules.
+9a01ba5c8a5c3812efb8204a55848ef9 /home/arch/catkin_ws/devel/include/jaskier_msgs/fingerADC.h
+fce8c4120c044d79c1d5cd77b577cf50 /home/arch/catkin_ws/devel/include/jaskier_msgs/handActive.h
+47ed1fb5f0a6f1704736c129f8f67d83 /home/arch/catkin_ws/devel/include/jaskier_msgs/touchContact.h
 fadb28157a0d18c6ac474d8989216bd5 /home/arch/catkin_ws/devel/include/zed_interfaces/ObjectStamped.h
 60c0c59332d72663dd5762c27831c74c /home/arch/catkin_ws/devel/include/zed_interfaces/Objects.h
 34916993be898ff8e1256236bd5636b2 /home/arch/catkin_ws/devel/include/zed_interfaces/RGBDSensors.h
@@ -16,6 +19,10 @@ d6874bffcea77371bceae19509674ce8 /home/arch/catkin_ws/devel/include/zed_interfac
 a24a75d0cc0de62db4b61d62e84c1b54 /home/arch/catkin_ws/devel/include/zed_interfaces/stop_svo_recording.h
 370496402c48789c0a067c117e44c385 /home/arch/catkin_ws/devel/include/zed_interfaces/toggle_led.h
 ffd9790a9a159d3b7830dedd46871dd8 /home/arch/catkin_ws/devel/include/zed_nodelets/ZedConfig.h
+fa46a17f852f3ba2c2d21f0103f3509b /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/__init__.py
+daf8a9822ea08a57463876abe93668a5 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_fingerADC.py
+79436c3893e2cdee2e0a5a3f5bda1734 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_handActive.py
+3f4da1db3b4e30cabc5c930cedae3dc9 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_touchContact.py
 153ba44186100b9839cdac6074490a1f /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/zed_interfaces/msg/_ObjectStamped.py
 3afc393deb4866aa54647200df29eacb /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/zed_interfaces/msg/_Objects.py
 228dc3914278c36b7d6d12c0f2757e34 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/zed_interfaces/msg/_RGBDSensors.py
@@ -34,6 +41,9 @@ e56adf9eec5d1c3a44fbef66d47bb5c9 /home/arch/catkin_ws/devel/lib/python2.7/dist-p
 d9f02cd88641cd0da82a032c7e69336c /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/zed_interfaces/srv/_stop_remote_stream.py
 a1be230723e8a12919b541b01f426320 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/zed_interfaces/srv/_stop_svo_recording.py
 056e02f80c6b8bfbeb037263da300852 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/zed_interfaces/srv/_toggle_led.py
+170db7ac494b528ec6298207716d0a2b /home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/fingerADC.lisp
+74b5e3fa74205d736b7aaa4191cf3ac9 /home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/handActive.lisp
+eec6d684e3e0056bd7d2e2456dbbf9aa /home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/touchContact.lisp
 9352b239c0ef757f87349fee5f40293f /home/arch/catkin_ws/devel/share/common-lisp/ros/zed_interfaces/msg/ObjectStamped.lisp
 1e8fe5bdde46982f8ef0ab78dbfe24ad /home/arch/catkin_ws/devel/share/common-lisp/ros/zed_interfaces/msg/Objects.lisp
 687da5c8dc565116038a02b765766222 /home/arch/catkin_ws/devel/share/common-lisp/ros/zed_interfaces/msg/RGBDSensors.lisp
@@ -50,6 +60,9 @@ b4fa26e5d72754ac17eb75237b1b24a4 /home/arch/catkin_ws/devel/share/common-lisp/ro
 e1d560f044fbfa03f177e61ba06ad2af /home/arch/catkin_ws/devel/share/common-lisp/ros/zed_interfaces/srv/stop_remote_stream.lisp
 15ef31eee97b0753786d61f3df7b7621 /home/arch/catkin_ws/devel/share/common-lisp/ros/zed_interfaces/srv/stop_svo_recording.lisp
 d89d1a1b311288728ae50b714677221e /home/arch/catkin_ws/devel/share/common-lisp/ros/zed_interfaces/srv/toggle_led.lisp
+68ee17e39da5e08dae0d30d73c54350e /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/fingerADC.js
+a84c9eeaf0266b0ed615447e273bbeef /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/handActive.js
+e39065cf5d172ec6b20757be95fc440b /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/touchContact.js
 1b571690590d230c15dd2a46fde4fa2f /home/arch/catkin_ws/devel/share/gennodejs/ros/zed_interfaces/msg/ObjectStamped.js
 36d1556d29cc404a0fc748026cd4ca9c /home/arch/catkin_ws/devel/share/gennodejs/ros/zed_interfaces/msg/Objects.js
 afabae459fbbf927091f090a11a440e0 /home/arch/catkin_ws/devel/share/gennodejs/ros/zed_interfaces/msg/RGBDSensors.js
@@ -66,6 +79,10 @@ b3c47f46afa1e5d37dc0fc06997327ba /home/arch/catkin_ws/devel/share/gennodejs/ros/
 975732edd91d6de534cce677e643f42b /home/arch/catkin_ws/devel/share/gennodejs/ros/zed_interfaces/srv/stop_remote_stream.js
 a272111e856ac4bcfa57fcceb8387327 /home/arch/catkin_ws/devel/share/gennodejs/ros/zed_interfaces/srv/stop_svo_recording.js
 5e6796ec6743da3c30d2e9544afb5d49 /home/arch/catkin_ws/devel/share/gennodejs/ros/zed_interfaces/srv/toggle_led.js
+7aab18a447bba0417f046caf4c9c0749 /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/manifest.l
+0e0cb7b71ff06a1cd9f417e7f4a1179d /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/fingerADC.l
+3fbc074ed7962ca858c268ec4d820c5b /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/handActive.l
+56cce96b6503d382ff255cdb435829a4 /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/touchContact.l
 3d3eddc282c3b8a5be2c025ac51c5dad /home/arch/catkin_ws/devel/share/roseus/ros/zed_interfaces/manifest.l
 06a66774474cf934c7ef13b0f12296dc /home/arch/catkin_ws/devel/share/roseus/ros/zed_interfaces/msg/ObjectStamped.l
 35f904ae6da48b5d1ddc94b7ecd2ac1c /home/arch/catkin_ws/devel/share/roseus/ros/zed_interfaces/msg/Objects.l
@@ -84,6 +101,14 @@ fe1bb406c82186f487aff466f0c373a2 /home/arch/catkin_ws/devel/share/roseus/ros/zed
 bfc421ed9e1e2086864c5cfeedbccf69 /home/arch/catkin_ws/devel/share/roseus/ros/zed_interfaces/srv/stop_svo_recording.l
 8b0a32fd5bc52c7ce965f0fc96ec43b8 /home/arch/catkin_ws/devel/share/roseus/ros/zed_interfaces/srv/toggle_led.l
 be089579e526e6e33e86f8c644d2f714 CMakeFiles/clean_test_results
+007dd8f9aeed068b7bfd7e89a7eef2eb jaskier_msgs/CMakeFiles/_jaskier_msgs_generate_messages_check_deps_fingerADC
+ef145932c1a1b3d35a7b1041e8f7bb68 jaskier_msgs/CMakeFiles/_jaskier_msgs_generate_messages_check_deps_handActive
+47e2b4a4e7783bbc8b13dc63064c10e1 jaskier_msgs/CMakeFiles/_jaskier_msgs_generate_messages_check_deps_touchContact
+05fde177a4086718be0d7af4a25a6388 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_cpp
+05fde177a4086718be0d7af4a25a6388 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_eus
+05fde177a4086718be0d7af4a25a6388 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_lisp
+05fde177a4086718be0d7af4a25a6388 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_nodejs
+05fde177a4086718be0d7af4a25a6388 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_py
 98ee53ee1323b07da1f9bd84396f83d0 zed-ros-wrapper/zed_interfaces/CMakeFiles/_zed_interfaces_generate_messages_check_deps_ObjectStamped
 a1bd25da43fec53ce63ba003a174d7a2 zed-ros-wrapper/zed_interfaces/CMakeFiles/_zed_interfaces_generate_messages_check_deps_Objects
 c6eacd80be1540ceb216465fff2712c7 zed-ros-wrapper/zed_interfaces/CMakeFiles/_zed_interfaces_generate_messages_check_deps_RGBDSensors

@@ -1,0 +1,8 @@
+prefix=/home/arch/catkin_ws/devel
+
+Name: jaskier_joint_state
+Description: Description of jaskier_joint_state
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
