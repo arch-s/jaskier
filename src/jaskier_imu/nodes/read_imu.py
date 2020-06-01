@@ -46,60 +46,64 @@ def printMPU(accel, gyro, mag):
     print()
     return
 
-#------------MAIN------------
+def main()
 
-imu_hand = Fabo.MPU9250(bus=0, G_SCALE=Fabo.GFS_2000, A_SCALE=Fabo.AFS_16G, M_MODE=Fabo.AK8963_MODE_C100HZ)
-  
-rospy.init_node("imu_publisher")
-imu_topic = rospy.Publisher("/imu/data_raw", Imu, queue_size=10)
-mag_topic = rospy.Publisher("/imu/mag", Mag ,queue_size=10)
-imu = Imu()
-mag_msg = Mag()
-imu.angular_velocity_covariance = (0.0025, 0, 0, 0, 0.0025, 0, 0, 0, 0.0025)
-imu.linear_acceleration_covariance = (0.0025, 0, 0, 0, 0.0025, 0, 0, 0, 0.0025)
-imu.orientation_covariance = (0.0025, 0, 0, 0, 0.0025, 0, 0, 0, 0.0025)
-mag_msg.magnetic_field_covariance = (0.0025, 0, 0, 0, 0.0025, 0, 0, 0, 0.0025)
+    imu_hand = Fabo.MPU9250(bus=0, G_SCALE=Fabo.GFS_2000, A_SCALE=Fabo.AFS_16G, M_MODE=Fabo.AK8963_MODE_C100HZ)
+      
+    rospy.init_node("mpu_publisher")
+    rate = rospy.Rate(100)
+    imu_topic = rospy.Publisher("/mpu/data_raw", Imu, queue_size=10)
+    mag_topic = rospy.Publisher("/mpu/mag", Mag ,queue_size=10)
+    imu = Imu()
+    mag_msg = Mag()
+    imu.angular_velocity_covariance = (0.0025, 0, 0, 0, 0.0025, 0, 0, 0, 0.0025)
+    imu.linear_acceleration_covariance = (0.0025, 0, 0, 0, 0.0025, 0, 0, 0, 0.0025)
+    imu.orientation_covariance = (0.0025, 0, 0, 0, 0.0025, 0, 0, 0, 0.0025)
+    mag_msg.magnetic_field_covariance = (0.0025, 0, 0, 0, 0.0025, 0, 0, 0, 0.0025)
 
-while True:
+    while not rospy.is_shutdown():
 
-    accel = imu_hand.readAccel()
-    gyro = imu_hand.readGyro()
-    mag = imu_hand.readMagnet()
+        accel = imu_hand.readAccel()
+        gyro = imu_hand.readGyro()
+        mag = imu_hand.readMagnet()
 
-    #printMPU(accel, gyro, mag)
+        #printMPU(accel, gyro, mag)
 
-    roll = math.atan2(accel['y'], accel['z'])
-    pitch = pitchCalc(accel['x'], accel['y'], accel['z'], roll)
-    yaw = yawCalc(mag['x'], mag['y'], mag['z'], roll, pitch)
+        roll = math.atan2(accel['y'], accel['z'])
+        pitch = pitchCalc(accel['x'], accel['y'], accel['z'], roll)
+        yaw = yawCalc(mag['x'], mag['y'], mag['z'], roll, pitch)
 
-    #-----Quaternion-------
+        #-----Quaternion-------
 
-    imu.orientation.x = roll
-    imu.orientation.y = pitch
-    imu.orientation.z = yaw
-    imu.orientation.w = 1
+        imu.orientation.x = roll
+        imu.orientation.y = pitch
+        imu.orientation.z = yaw
+        imu.orientation.w = 1
 
-    #------Raw values-------
+        #------Raw values-------
 
-    imu.angular_velocity.x = gyro['x']*DPS_TO_RADS
-    imu.angular_velocity.y = gyro['y']*DPS_TO_RADS
-    imu.angular_velocity.z = gyro['z']*DPS_TO_RADS
+        imu.angular_velocity.x = gyro['x']*DPS_TO_RADS
+        imu.angular_velocity.y = gyro['y']*DPS_TO_RADS
+        imu.angular_velocity.z = gyro['z']*DPS_TO_RADS
 
-    imu.linear_acceleration.x = accel['x']*GRAVITY_EARTH
-    imu.linear_acceleration.y = accel['y']*GRAVITY_EARTH
-    imu.linear_acceleration.z = accel['z']*GRAVITY_EARTH
+        imu.linear_acceleration.x = accel['x']*GRAVITY_EARTH
+        imu.linear_acceleration.y = accel['y']*GRAVITY_EARTH
+        imu.linear_acceleration.z = accel['z']*GRAVITY_EARTH
 
-    imu.header.stamp = rospy.Time.now()
-    mag_msg.header.stamp = imu.header.stamp
+        imu.header.stamp = rospy.Time.now()
+        mag_msg.header.stamp = imu.header.stamp
 
-    mag_msg.magnetic_field.x = mag['x']/1000000 
-    mag_msg.magnetic_field.y = mag['y']/1000000
-    mag_msg.magnetic_field.z = mag['z']/1000000
+        mag_msg.magnetic_field.x = mag['x']/1000000 
+        mag_msg.magnetic_field.y = mag['y']/1000000
+        mag_msg.magnetic_field.z = mag['z']/1000000
 
-    #----publish to topics----
+        #----publish to topics----
 
-    imu_topic.publish(imu)
-    mag_topic.publish(mag_msg)
+        imu_topic.publish(imu)
+        mag_topic.publish(mag_msg)
 
-    time.sleep(0.5)
+        rate.sleep()
+
+if __name__ == "__main__":
+    main()
 
