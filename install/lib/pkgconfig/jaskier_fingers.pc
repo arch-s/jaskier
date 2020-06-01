@@ -1,8 +1,0 @@
-prefix=/home/arch/catkin_ws/install
-
-Name: jaskier_fingers
-Description: Description of jaskier_fingers
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
