@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: jaskier_urdf
+    relative_path: urdf/jaskier.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/jaskier.srdf
+  CONFIG:
+    author_name: arch
+    author_email: as10216@ic.ac.uk
+    generated_timestamp: 1591202479

@@ -4,7 +4,7 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="jaskier">
-  <link name="base_link">
+  <link name="hand_link">
     <visual>
       <geometry>
         <box size="0.08 0.08 0.02"/>
@@ -100,35 +100,35 @@
     </collision>
   </link>
   <joint name="thumb_joint" type="revolute">
-    <parent link="base_link"/>
+    <parent link="hand_link"/>
     <child link="thumb"/>
     <axis xyz="0 1 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
     <origin rpy="0.9 0.6 0" xyz="-0.04 -0.04 0"/>
   </joint>
   <joint name="index_joint" type="revolute">
-    <parent link="base_link"/>
+    <parent link="hand_link"/>
     <child link="index"/>
     <axis xyz="1 0 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
     <origin rpy="1.57079632679 0 0" xyz="-0.04 0.04 0"/>
   </joint>
   <joint name="middle_joint" type="revolute">
-    <parent link="base_link"/>
+    <parent link="hand_link"/>
     <child link="middle"/>
     <axis xyz="1 0 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
     <origin rpy="1.57079632679 0 0" xyz="-0.0133333333333 0.04 0"/>
   </joint>
   <joint name="ring_joint" type="revolute">
-    <parent link="base_link"/>
+    <parent link="hand_link"/>
     <child link="ring"/>
     <axis xyz="1 0 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
     <origin rpy="1.57079632679 0 0" xyz="0.0133333333333 0.04 0"/>
   </joint>
   <joint name="little_joint" type="revolute">
-    <parent link="base_link"/>
+    <parent link="hand_link"/>
     <child link="little"/>
     <axis xyz="1 0 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>

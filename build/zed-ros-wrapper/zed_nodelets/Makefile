@@ -102,6 +102,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -123,17 +134,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,126 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/all_files_zed_nodelets.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/all_files_zed_nodelets.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/all_files_zed_nodelets.dir/rule
-
-# Convenience name for target.
-all_files_zed_nodelets: zed-ros-wrapper/zed_nodelets/CMakeFiles/all_files_zed_nodelets.dir/rule
-
-.PHONY : all_files_zed_nodelets
-
-# fast build rule for target.
-all_files_zed_nodelets/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/all_files_zed_nodelets.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/all_files_zed_nodelets.dir/build
-.PHONY : all_files_zed_nodelets/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/zed_nodelets_gencfg.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/zed_nodelets_gencfg.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/zed_nodelets_gencfg.dir/rule
-
-# Convenience name for target.
-zed_nodelets_gencfg: zed-ros-wrapper/zed_nodelets/CMakeFiles/zed_nodelets_gencfg.dir/rule
-
-.PHONY : zed_nodelets_gencfg
-
-# fast build rule for target.
-zed_nodelets_gencfg/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/zed_nodelets_gencfg.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/zed_nodelets_gencfg.dir/build
-.PHONY : zed_nodelets_gencfg/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/ZEDNodelets.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/ZEDNodelets.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/ZEDNodelets.dir/rule
-
-# Convenience name for target.
-ZEDNodelets: zed-ros-wrapper/zed_nodelets/CMakeFiles/ZEDNodelets.dir/rule
-
-.PHONY : ZEDNodelets
-
-# fast build rule for target.
-ZEDNodelets/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/ZEDNodelets.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/ZEDNodelets.dir/build
-.PHONY : ZEDNodelets/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_py: zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_py
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_py/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
-.PHONY : diagnostic_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_lisp: zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_lisp
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_lisp/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
-.PHONY : diagnostic_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
 zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_nodejs.dir/rule
 .PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_nodejs.dir/rule
@@ -303,34 +183,34 @@ stereo_msgs_generate_messages_nodejs/fast:
 .PHONY : stereo_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
+.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-nodelet_generate_messages_nodejs: zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+diagnostic_msgs_generate_messages_cpp: zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : nodelet_generate_messages_nodejs
+.PHONY : diagnostic_msgs_generate_messages_cpp
 
 # fast build rule for target.
-nodelet_generate_messages_nodejs/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
-.PHONY : nodelet_generate_messages_nodejs/fast
+diagnostic_msgs_generate_messages_cpp/fast:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
+.PHONY : diagnostic_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
+.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-nodelet_generate_messages_cpp: zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+diagnostic_msgs_generate_messages_eus: zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
 
-.PHONY : nodelet_generate_messages_cpp
+.PHONY : diagnostic_msgs_generate_messages_eus
 
 # fast build rule for target.
-nodelet_generate_messages_cpp/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_cpp.dir/build
-.PHONY : nodelet_generate_messages_cpp/fast
+diagnostic_msgs_generate_messages_eus/fast:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
+.PHONY : diagnostic_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_cpp.dir/rule:
@@ -363,184 +243,19 @@ stereo_msgs_generate_messages_py/fast:
 .PHONY : stereo_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_eus.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_eus.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_lisp.dir/rule:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_lisp.dir/rule
+.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-nodelet_generate_messages_eus: zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+stereo_msgs_generate_messages_lisp: zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : nodelet_generate_messages_eus
+.PHONY : stereo_msgs_generate_messages_lisp
 
 # fast build rule for target.
-nodelet_generate_messages_eus/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_eus.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_eus.dir/build
-.PHONY : nodelet_generate_messages_eus/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_eus.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_eus.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_eus: zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_eus.dir/rule
-
-.PHONY : bond_generate_messages_eus
-
-# fast build rule for target.
-bond_generate_messages_eus/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_eus.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_eus.dir/build
-.PHONY : bond_generate_messages_eus/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_eus: zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_eus
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_eus/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
-.PHONY : diagnostic_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_py.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_py.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_py.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_py: zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_py.dir/rule
-
-.PHONY : bond_generate_messages_py
-
-# fast build rule for target.
-bond_generate_messages_py/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_py.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_py.dir/build
-.PHONY : bond_generate_messages_py/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_cpp: zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_cpp
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_cpp/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
-.PHONY : diagnostic_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_gencfg: zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-.PHONY : dynamic_reconfigure_gencfg
-
-# fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_eus.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_eus.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-stereo_msgs_generate_messages_eus: zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_eus.dir/rule
-
-.PHONY : stereo_msgs_generate_messages_eus
-
-# fast build rule for target.
-stereo_msgs_generate_messages_eus/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_eus.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_eus.dir/build
-.PHONY : stereo_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_lisp.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_lisp: zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-
-.PHONY : nodelet_generate_messages_lisp
-
-# fast build rule for target.
-nodelet_generate_messages_lisp/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_lisp.dir/build
-.PHONY : nodelet_generate_messages_lisp/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_cpp.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_cpp.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_cpp: zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_cpp.dir/rule
-
-.PHONY : bond_generate_messages_cpp
-
-# fast build rule for target.
-bond_generate_messages_cpp/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_cpp.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_cpp.dir/build
-.PHONY : bond_generate_messages_cpp/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_lisp.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_lisp.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_lisp: zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_lisp.dir/rule
-
-.PHONY : bond_generate_messages_lisp
-
-# fast build rule for target.
-bond_generate_messages_lisp/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_lisp.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_lisp.dir/build
-.PHONY : bond_generate_messages_lisp/fast
-
-# Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+stereo_msgs_generate_messages_lisp/fast:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_lisp.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_lisp.dir/build
+.PHONY : stereo_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule:
@@ -558,49 +273,94 @@ diagnostic_msgs_generate_messages_nodejs/fast:
 .PHONY : diagnostic_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_lisp.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_lisp.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_lisp.dir/rule
+zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_eus.dir/rule:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_eus.dir/rule
+.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-stereo_msgs_generate_messages_lisp: zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_lisp.dir/rule
+stereo_msgs_generate_messages_eus: zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_eus.dir/rule
 
-.PHONY : stereo_msgs_generate_messages_lisp
+.PHONY : stereo_msgs_generate_messages_eus
 
 # fast build rule for target.
-stereo_msgs_generate_messages_lisp/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_lisp.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_lisp.dir/build
-.PHONY : stereo_msgs_generate_messages_lisp/fast
+stereo_msgs_generate_messages_eus/fast:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_eus.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/stereo_msgs_generate_messages_eus.dir/build
+.PHONY : stereo_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_py.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_py.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_py.dir/rule
+zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
+.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-nodelet_generate_messages_py: zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_py.dir/rule
+diagnostic_msgs_generate_messages_lisp: zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : nodelet_generate_messages_py
+.PHONY : diagnostic_msgs_generate_messages_lisp
 
 # fast build rule for target.
-nodelet_generate_messages_py/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_py.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/nodelet_generate_messages_py.dir/build
-.PHONY : nodelet_generate_messages_py/fast
+diagnostic_msgs_generate_messages_lisp/fast:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
+.PHONY : diagnostic_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_nodejs.dir/rule:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_nodejs.dir/rule
-.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+zed-ros-wrapper/zed_nodelets/CMakeFiles/zed_nodelets_gencfg.dir/rule:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/zed_nodelets_gencfg.dir/rule
+.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/zed_nodelets_gencfg.dir/rule
 
 # Convenience name for target.
-bond_generate_messages_nodejs: zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+zed_nodelets_gencfg: zed-ros-wrapper/zed_nodelets/CMakeFiles/zed_nodelets_gencfg.dir/rule
 
-.PHONY : bond_generate_messages_nodejs
+.PHONY : zed_nodelets_gencfg
 
 # fast build rule for target.
-bond_generate_messages_nodejs/fast:
-	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_nodejs.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/bond_generate_messages_nodejs.dir/build
-.PHONY : bond_generate_messages_nodejs/fast
+zed_nodelets_gencfg/fast:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/zed_nodelets_gencfg.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/zed_nodelets_gencfg.dir/build
+.PHONY : zed_nodelets_gencfg/fast
+
+# Convenience name for target.
+zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_py: zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_py
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_py/fast:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
+.PHONY : diagnostic_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+zed-ros-wrapper/zed_nodelets/CMakeFiles/ZEDNodelets.dir/rule:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/ZEDNodelets.dir/rule
+.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/ZEDNodelets.dir/rule
+
+# Convenience name for target.
+ZEDNodelets: zed-ros-wrapper/zed_nodelets/CMakeFiles/ZEDNodelets.dir/rule
+
+.PHONY : ZEDNodelets
+
+# fast build rule for target.
+ZEDNodelets/fast:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/ZEDNodelets.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/ZEDNodelets.dir/build
+.PHONY : ZEDNodelets/fast
+
+# Convenience name for target.
+zed-ros-wrapper/zed_nodelets/CMakeFiles/all_files_zed_nodelets.dir/rule:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 zed-ros-wrapper/zed_nodelets/CMakeFiles/all_files_zed_nodelets.dir/rule
+.PHONY : zed-ros-wrapper/zed_nodelets/CMakeFiles/all_files_zed_nodelets.dir/rule
+
+# Convenience name for target.
+all_files_zed_nodelets: zed-ros-wrapper/zed_nodelets/CMakeFiles/all_files_zed_nodelets.dir/rule
+
+.PHONY : all_files_zed_nodelets
+
+# fast build rule for target.
+all_files_zed_nodelets/fast:
+	cd /home/arch/catkin_ws/build && $(MAKE) -f zed-ros-wrapper/zed_nodelets/CMakeFiles/all_files_zed_nodelets.dir/build.make zed-ros-wrapper/zed_nodelets/CMakeFiles/all_files_zed_nodelets.dir/build
+.PHONY : all_files_zed_nodelets/fast
 
 src/rgbd_sensors_demux_nodelet/src/rgbd_sensor_demux.o: src/rgbd_sensors_demux_nodelet/src/rgbd_sensor_demux.cpp.o
 
@@ -720,38 +480,22 @@ help:
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... test"
-	@echo "... all_files_zed_nodelets"
-	@echo "... zed_nodelets_gencfg"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... ZEDNodelets"
-	@echo "... diagnostic_msgs_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... diagnostic_msgs_generate_messages_lisp"
-	@echo "... edit_cache"
 	@echo "... stereo_msgs_generate_messages_nodejs"
-	@echo "... nodelet_generate_messages_nodejs"
-	@echo "... nodelet_generate_messages_cpp"
+	@echo "... edit_cache"
+	@echo "... diagnostic_msgs_generate_messages_cpp"
+	@echo "... diagnostic_msgs_generate_messages_eus"
 	@echo "... stereo_msgs_generate_messages_cpp"
 	@echo "... stereo_msgs_generate_messages_py"
-	@echo "... nodelet_generate_messages_eus"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
-	@echo "... bond_generate_messages_eus"
-	@echo "... diagnostic_msgs_generate_messages_eus"
-	@echo "... bond_generate_messages_py"
-	@echo "... diagnostic_msgs_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... stereo_msgs_generate_messages_eus"
-	@echo "... nodelet_generate_messages_lisp"
-	@echo "... bond_generate_messages_cpp"
-	@echo "... bond_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... diagnostic_msgs_generate_messages_nodejs"
 	@echo "... stereo_msgs_generate_messages_lisp"
-	@echo "... nodelet_generate_messages_py"
-	@echo "... bond_generate_messages_nodejs"
+	@echo "... diagnostic_msgs_generate_messages_nodejs"
+	@echo "... rebuild_cache"
+	@echo "... stereo_msgs_generate_messages_eus"
+	@echo "... diagnostic_msgs_generate_messages_lisp"
+	@echo "... zed_nodelets_gencfg"
+	@echo "... diagnostic_msgs_generate_messages_py"
+	@echo "... ZEDNodelets"
+	@echo "... all_files_zed_nodelets"
+	@echo "... test"
 	@echo "... src/rgbd_sensors_demux_nodelet/src/rgbd_sensor_demux.o"
 	@echo "... src/rgbd_sensors_demux_nodelet/src/rgbd_sensor_demux.i"
 	@echo "... src/rgbd_sensors_demux_nodelet/src/rgbd_sensor_demux.s"

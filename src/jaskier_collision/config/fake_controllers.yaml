@@ -1,0 +1,12 @@
+controller_list:
+  - name: fake_hand_controller
+    joints:
+      - virtual_joint
+      - index_joint
+      - little_joint
+      - middle_joint
+      - ring_joint
+      - thumb_joint
+initial:  # Define initial robot poses.
+#  - group: hand
+#    pose: home

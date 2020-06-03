@@ -107,7 +107,7 @@
         <limit effort="0.0" velocity="20" lower="-1.8" upper="0"/>
     </xacro:macro>
      
-    <link name="base_link">
+    <link name="hand_link">
         <visual>
             <geometry>
                 <box size="${base_x} ${base_y} ${base_z}"/>
@@ -204,7 +204,7 @@
     </link>
  
     <joint name="thumb_joint" type="revolute">
-        <parent link="base_link"/>
+        <parent link="hand_link"/>
         <child link="thumb"/>
         <axis xyz="0 1 0"/>
         <xacro:joint_limit/>
@@ -212,7 +212,7 @@
     </joint>
      
     <joint name="index_joint" type="revolute">
-        <parent link="base_link"/>
+        <parent link="hand_link"/>
         <child link="index"/>
         <xacro:joint_axis/>
         <xacro:joint_limit/>
@@ -220,7 +220,7 @@
     </joint>
 
     <joint name="middle_joint" type="revolute">
-        <parent link="base_link"/>
+        <parent link="hand_link"/>
         <child link="middle"/>
         <xacro:joint_axis/>
         <xacro:joint_limit/>
@@ -228,7 +228,7 @@
     </joint>
 
     <joint name="ring_joint" type="revolute">
-        <parent link="base_link"/>
+        <parent link="hand_link"/>
         <child link="ring"/>
         <xacro:joint_axis/>
         <xacro:joint_limit/>
@@ -236,7 +236,7 @@
     </joint>
 
     <joint name="little_joint" type="revolute">
-        <parent link="base_link"/>
+        <parent link="hand_link"/>
         <child link="little"/>
         <xacro:joint_axis/>
         <xacro:joint_limit/>
