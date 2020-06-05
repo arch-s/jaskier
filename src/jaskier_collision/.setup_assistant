@@ -8,4 +8,4 @@ moveit_setup_assistant_config:
   CONFIG:
     author_name: arch
     author_email: as10216@ic.ac.uk
-    generated_timestamp: 1591202479
+    generated_timestamp: 1591297101

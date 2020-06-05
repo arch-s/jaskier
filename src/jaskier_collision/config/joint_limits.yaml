@@ -3,27 +3,27 @@
 # Joint limits can be turned off with [has_velocity_limits, has_acceleration_limits]
 joint_limits:
   index_joint:
-    has_velocity_limits: true
+    has_velocity_limits: false
     max_velocity: 20
     has_acceleration_limits: false
     max_acceleration: 0
   little_joint:
-    has_velocity_limits: true
+    has_velocity_limits: false
     max_velocity: 20
     has_acceleration_limits: false
     max_acceleration: 0
   middle_joint:
-    has_velocity_limits: true
+    has_velocity_limits: false
     max_velocity: 20
     has_acceleration_limits: false
     max_acceleration: 0
   ring_joint:
-    has_velocity_limits: true
+    has_velocity_limits: false
     max_velocity: 20
     has_acceleration_limits: false
     max_acceleration: 0
   thumb_joint:
-    has_velocity_limits: true
+    has_velocity_limits: false
     max_velocity: 20
     has_acceleration_limits: false
     max_acceleration: 0
