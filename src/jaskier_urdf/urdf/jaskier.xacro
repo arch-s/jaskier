@@ -13,7 +13,7 @@
     <xacro:property name="thumb_o_y" value="-${base_y/2}"/>
     <xacro:property name="thumb_o_r" value="0.9"/>
     <xacro:property name="thumb_o_p" value="0.6"/>
-    <xacro:property name="thumb_o_xyz" value="${thumb_o_x} ${thumb_o_y} 0"/>
+    <xacro:property name="thumb_o_xyz" value="${thumb_o_x} ${thumb_o_y} -${base_z}"/>
     <xacro:property name="thumb_o_rpy" value="${thumb_o_r} ${thumb_o_p} 0"/>
     <xacro:macro name="thumb_o">
 			<origin xyz="${thumb_o_xyz}" rpy="${thumb_o_rpy}"/>
@@ -350,9 +350,9 @@
     <joint name="thumb_ip" type="revolute">
         <parent link="thumb_proximal"/>
         <child link="thumb_distal"/>
-        <xacro:joint_axis/>
+        <axis xyz="0 1 0"/>
         <xacro:joint_limit/>
-        <origin xyz="0 0 ${thumb_proximal}" rpy="0 0 0"/>
+        <origin xyz="0 0 -${thumb_proximal}" rpy="0 0 0"/>
     </joint>
 
     <joint name="index_mcp" type="revolute">

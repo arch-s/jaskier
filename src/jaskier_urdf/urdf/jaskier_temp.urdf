@@ -208,14 +208,14 @@
     <child link="thumb_proximal"/>
     <axis xyz="0 1 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
-    <origin rpy="0.9 0.6 0" xyz="-0.0425 -0.0305 0"/>
+    <origin rpy="0.9 0.6 0" xyz="-0.0425 -0.0305 -0.02"/>
   </joint>
   <joint name="thumb_ip" type="revolute">
     <parent link="thumb_proximal"/>
     <child link="thumb_distal"/>
-    <axis xyz="1 0 0"/>
+    <axis xyz="0 1 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
-    <origin rpy="0 0 0" xyz="0 0 0.034"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.034"/>
   </joint>
   <joint name="index_mcp" type="revolute">
     <parent link="hand_link"/>
