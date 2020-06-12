@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "/home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/touchContact.l"
   "/home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/fingerADC.l"
   "/home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/handActive.l"
+  "/home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/ultraTimeStamp.l"
   "/home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/manifest.l"
 )
 

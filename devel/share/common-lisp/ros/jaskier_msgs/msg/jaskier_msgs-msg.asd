@@ -10,4 +10,6 @@
     (:file "_package_handActive" :depends-on ("_package"))
     (:file "touchContact" :depends-on ("_package_touchContact"))
     (:file "_package_touchContact" :depends-on ("_package"))
+    (:file "ultraTimeStamp" :depends-on ("_package_ultraTimeStamp"))
+    (:file "_package_ultraTimeStamp" :depends-on ("_package"))
   ))

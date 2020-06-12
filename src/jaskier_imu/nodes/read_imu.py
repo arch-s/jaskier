@@ -46,14 +46,14 @@ def printMPU(accel, gyro, mag):
     print()
     return
 
-def main()
+def main():
 
-    imu_hand = Fabo.MPU9250(bus=0, G_SCALE=Fabo.GFS_2000, A_SCALE=Fabo.AFS_16G, M_MODE=Fabo.AK8963_MODE_C100HZ)
+    imu_hand = Fabo.MPU9250(bus=1, G_SCALE=Fabo.GFS_2000, A_SCALE=Fabo.AFS_16G, M_MODE=Fabo.AK8963_MODE_C100HZ)
       
     rospy.init_node("mpu_publisher")
     rate = rospy.Rate(100)
-    imu_topic = rospy.Publisher("/mpu/data_raw", Imu, queue_size=10)
-    mag_topic = rospy.Publisher("/mpu/mag", Mag ,queue_size=10)
+    imu_topic = rospy.Publisher("/imu/data_raw", Imu, queue_size=10)
+    mag_topic = rospy.Publisher("/imu/mag", Mag ,queue_size=10)
     imu = Imu()
     mag_msg = Mag()
     imu.angular_velocity_covariance = (0.0025, 0, 0, 0, 0.0025, 0, 0, 0, 0.0025)

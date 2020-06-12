@@ -53,6 +53,7 @@ find_package(catkin REQUIRED COMPONENTS
    fingerADC.msg
    handActive.msg
    touchContact.msg
+   ultraTimeStamp.msg
  )
 
 ## Generate services in the 'srv' folder

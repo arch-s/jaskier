@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "jaskier_msgs: 3 messages, 0 services")
+message(STATUS "jaskier_msgs: 4 messages, 0 services")
 
 set(MSG_I_FLAGS "-Ijaskier_msgs:/home/arch/catkin_ws/src/jaskier_msgs/msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
@@ -32,6 +32,11 @@ add_custom_target(_jaskier_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "jaskier_msgs" "/home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg" ""
 )
 
+get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg" NAME_WE)
+add_custom_target(_jaskier_msgs_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "jaskier_msgs" "/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -56,6 +61,12 @@ _generate_msg_cpp(jaskier_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/jaskier_msgs
 )
+_generate_msg_cpp(jaskier_msgs
+  "/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/jaskier_msgs
+)
 
 ### Generating Services
 
@@ -76,6 +87,8 @@ add_dependencies(jaskier_msgs_generate_messages_cpp _jaskier_msgs_generate_messa
 get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/fingerADC.msg" NAME_WE)
 add_dependencies(jaskier_msgs_generate_messages_cpp _jaskier_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg" NAME_WE)
+add_dependencies(jaskier_msgs_generate_messages_cpp _jaskier_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg" NAME_WE)
 add_dependencies(jaskier_msgs_generate_messages_cpp _jaskier_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -105,6 +118,12 @@ _generate_msg_eus(jaskier_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/jaskier_msgs
 )
+_generate_msg_eus(jaskier_msgs
+  "/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/jaskier_msgs
+)
 
 ### Generating Services
 
@@ -125,6 +144,8 @@ add_dependencies(jaskier_msgs_generate_messages_eus _jaskier_msgs_generate_messa
 get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/fingerADC.msg" NAME_WE)
 add_dependencies(jaskier_msgs_generate_messages_eus _jaskier_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg" NAME_WE)
+add_dependencies(jaskier_msgs_generate_messages_eus _jaskier_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg" NAME_WE)
 add_dependencies(jaskier_msgs_generate_messages_eus _jaskier_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -154,6 +175,12 @@ _generate_msg_lisp(jaskier_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/jaskier_msgs
 )
+_generate_msg_lisp(jaskier_msgs
+  "/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/jaskier_msgs
+)
 
 ### Generating Services
 
@@ -174,6 +201,8 @@ add_dependencies(jaskier_msgs_generate_messages_lisp _jaskier_msgs_generate_mess
 get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/fingerADC.msg" NAME_WE)
 add_dependencies(jaskier_msgs_generate_messages_lisp _jaskier_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg" NAME_WE)
+add_dependencies(jaskier_msgs_generate_messages_lisp _jaskier_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg" NAME_WE)
 add_dependencies(jaskier_msgs_generate_messages_lisp _jaskier_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -203,6 +232,12 @@ _generate_msg_nodejs(jaskier_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/jaskier_msgs
 )
+_generate_msg_nodejs(jaskier_msgs
+  "/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/jaskier_msgs
+)
 
 ### Generating Services
 
@@ -223,6 +258,8 @@ add_dependencies(jaskier_msgs_generate_messages_nodejs _jaskier_msgs_generate_me
 get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/fingerADC.msg" NAME_WE)
 add_dependencies(jaskier_msgs_generate_messages_nodejs _jaskier_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg" NAME_WE)
+add_dependencies(jaskier_msgs_generate_messages_nodejs _jaskier_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg" NAME_WE)
 add_dependencies(jaskier_msgs_generate_messages_nodejs _jaskier_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -252,6 +289,12 @@ _generate_msg_py(jaskier_msgs
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/jaskier_msgs
 )
+_generate_msg_py(jaskier_msgs
+  "/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/jaskier_msgs
+)
 
 ### Generating Services
 
@@ -272,6 +315,8 @@ add_dependencies(jaskier_msgs_generate_messages_py _jaskier_msgs_generate_messag
 get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/fingerADC.msg" NAME_WE)
 add_dependencies(jaskier_msgs_generate_messages_py _jaskier_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg" NAME_WE)
+add_dependencies(jaskier_msgs_generate_messages_py _jaskier_msgs_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg" NAME_WE)
 add_dependencies(jaskier_msgs_generate_messages_py _jaskier_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

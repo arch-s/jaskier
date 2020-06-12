@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "/home/arch/catkin_ws/devel/include/jaskier_msgs/touchContact.h"
   "/home/arch/catkin_ws/devel/include/jaskier_msgs/fingerADC.h"
   "/home/arch/catkin_ws/devel/include/jaskier_msgs/handActive.h"
+  "/home/arch/catkin_ws/devel/include/jaskier_msgs/ultraTimeStamp.h"
 )
 
 # Per-language clean rules from dependency scanning.

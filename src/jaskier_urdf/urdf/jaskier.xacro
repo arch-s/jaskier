@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro" name="jaskier">
 
-    <xacro:property name="base_x" value="0.08"/>
-    <xacro:property name="base_y" value="0.08"/>
+    <xacro:property name="base_x" value="0.085"/>
+    <xacro:property name="base_y" value="0.061"/>
     <xacro:property name="base_z" value="0.02"/> 
     <xacro:property name="base_xyz" value="${base_x} ${base_y} ${base_z}"/>
 
-    <xacro:property name="digit_radius" value="0.0075"/>
-
-    <xacro:property name="thumb_l" value="0.1"/>
+    <xacro:property name="thumb_proximal" value="0.034"/>
+    <xacro:property name="thumb_distal" value="0.032"/>
+    <xacro:property name="thumb_radius" value="0.017"/>
     <xacro:property name="thumb_o_x" value="-${base_x/2}"/>
     <xacro:property name="thumb_o_y" value="-${base_y/2}"/>
     <xacro:property name="thumb_o_r" value="0.9"/>
@@ -18,14 +18,20 @@
     <xacro:macro name="thumb_o">
 			<origin xyz="${thumb_o_xyz}" rpy="${thumb_o_rpy}"/>
     </xacro:macro>
-	<xacro:macro name="thumb_vis_o">
-			<origin xyz="0 0 -${thumb_l/2}" rpy="0 0 0"/>
+	<xacro:macro name="thumb_distal_vis">
+			<origin xyz="0 0 -${thumb_distal/2}" rpy="0 0 0"/>
 	</xacro:macro>
+	<xacro:macro name="thumb_proximal_vis">
+			<origin xyz="0 0 -${thumb_proximal/2}" rpy="0 0 0"/>
+    </xacro:macro>
 	<xacro:macro name="thumb_col_o">
-			<origin xyz="0 0 -${thumb_l}" rpy="0 0 0"/>
+			<origin xyz="0 0 -${thumb_distal}" rpy="0 0 0"/>
 	</xacro:macro>
 
-    <xacro:property name="index_l" value="0.1"/>
+    <xacro:property name="index_proximal" value="0.026"/>
+    <xacro:property name="index_middle" value="0.024"/>
+    <xacro:property name="index_distal" value="0.026"/>
+    <xacro:property name="index_radius" value="0.013"/>
     <xacro:property name="index_o_x" value="-${base_x/2}"/>
     <xacro:property name="index_o_y" value="${base_y/2}"/>
     <xacro:property name="index_o_r" value="${pi/2}"/>
@@ -34,15 +40,24 @@
     <xacro:property name="index_o_rpy" value="${index_o_r} ${index_o_p} 0"/>
     <xacro:macro name="index_o">
             <origin xyz="${index_o_xyz}" rpy="${index_o_rpy}"/>
-    </xacro:macro>
-	<xacro:macro name="index_vis_o">
-			<origin xyz="0 0 -${index_l/2}" rpy="0 0 0"/>
+    </xacro:macro>	
+	<xacro:macro name="index_distal_vis">
+			<origin xyz="0 0 -${index_distal/2}" rpy="0 0 0"/>
 	</xacro:macro>
+	<xacro:macro name="index_middle_vis">
+			<origin xyz="0 0 -${index_middle/2}" rpy="0 0 0"/>
+	</xacro:macro>
+	<xacro:macro name="index_proximal_vis">
+			<origin xyz="0 0 -${index_proximal/2}" rpy="0 0 0"/>
+    </xacro:macro>
 	<xacro:macro name="index_col_o">
-			<origin xyz="0 0 -${index_l}" rpy="0 0 0"/>
+			<origin xyz="0 0 -${index_distal}" rpy="0 0 0"/>
 	</xacro:macro>
 
-    <xacro:property name="middle_l" value="0.1"/>
+    <xacro:property name="middle_proximal" value="0.026"/>
+    <xacro:property name="middle_middle" value="0.027"/>
+    <xacro:property name="middle_distal" value="0.027"/>
+    <xacro:property name="middle_radius" value="0.014"/>
 	<xacro:property name="middle_o_x" value="-${base_x/6}"/>
     <xacro:property name="middle_o_y" value="${base_y/2}"/>
     <xacro:property name="middle_o_r" value="${pi/2}"/>
@@ -52,14 +67,23 @@
     <xacro:macro name="middle_o">
             <origin xyz="${middle_o_xyz}" rpy="${middle_o_rpy}"/>
     </xacro:macro>
-	<xacro:macro name="middle_vis_o">
-			<origin xyz="0 0 -${middle_l/2}" rpy="0 0 0"/>
+	<xacro:macro name="middle_distal_vis">
+			<origin xyz="0 0 -${middle_distal/2}" rpy="0 0 0"/>
 	</xacro:macro>
+	<xacro:macro name="middle_middle_vis">
+			<origin xyz="0 0 -${middle_middle/2}" rpy="0 0 0"/>
+	</xacro:macro>
+	<xacro:macro name="middle_proximal_vis">
+			<origin xyz="0 0 -${middle_proximal/2}" rpy="0 0 0"/>
+    </xacro:macro>
 	<xacro:macro name="middle_col_o">
-			<origin xyz="0 0 -${middle_l}" rpy="0 0 0"/>
+			<origin xyz="0 0 -${middle_distal}" rpy="0 0 0"/>
 	</xacro:macro>
 
-    <xacro:property name="ring_l" value="0.1"/>
+    <xacro:property name="ring_proximal" value="0.026"/>
+    <xacro:property name="ring_middle" value="0.024"/>
+    <xacro:property name="ring_distal" value="0.027"/>
+    <xacro:property name="ring_radius" value="0.013"/>
     <xacro:property name="ring_o_x" value="${base_x/6}"/>
     <xacro:property name="ring_o_y" value="${base_y/2}"/>
     <xacro:property name="ring_o_r" value="${pi/2}"/>
@@ -69,14 +93,23 @@
     <xacro:macro name="ring_o">
             <origin xyz="${ring_o_xyz}" rpy="${ring_o_rpy}"/>
     </xacro:macro>
-	<xacro:macro name="ring_vis_o">
-			<origin xyz="0 0 -${ring_l/2}" rpy="0 0 0"/>
+	<xacro:macro name="ring_distal_vis">
+			<origin xyz="0 0 -${ring_distal/2}" rpy="0 0 0"/>
 	</xacro:macro>
+	<xacro:macro name="ring_middle_vis">
+			<origin xyz="0 0 -${ring_middle/2}" rpy="0 0 0"/>
+	</xacro:macro>
+	<xacro:macro name="ring_proximal_vis">
+			<origin xyz="0 0 -${ring_proximal/2}" rpy="0 0 0"/>
+    </xacro:macro>
 	<xacro:macro name="ring_col_o">
-			<origin xyz="0 0 -${ring_l}" rpy="0 0 0"/>
+			<origin xyz="0 0 -${ring_distal}" rpy="0 0 0"/>
 	</xacro:macro>
 
-    <xacro:property name="little_l" value="0.1"/>
+    <xacro:property name="little_proximal" value="0.018"/>
+    <xacro:property name="little_middle" value="0.017"/>
+    <xacro:property name="little_distal" value="0.025"/>
+    <xacro:property name="little_radius" value="0.012"/>
     <xacro:property name="little_o_x" value="${base_x/2}"/>
     <xacro:property name="little_o_y" value="${base_y/2}"/>
     <xacro:property name="little_o_r" value="${pi/2}"/>
@@ -86,11 +119,17 @@
     <xacro:macro name="little_o">
             <origin xyz="${little_o_xyz}" rpy="${little_o_rpy}"/>
     </xacro:macro>
-	<xacro:macro name="little_vis_o">
-			<origin xyz="0 0 -${little_l/2}" rpy="0 0 0"/>
+	<xacro:macro name="little_distal_vis">
+			<origin xyz="0 0 -${little_distal/2}" rpy="0 0 0"/>
 	</xacro:macro>
+	<xacro:macro name="little_middle_vis">
+			<origin xyz="0 0 -${little_middle/2}" rpy="0 0 0"/>
+	</xacro:macro>
+	<xacro:macro name="little_proximal_vis">
+			<origin xyz="0 0 -${little_proximal/2}" rpy="0 0 0"/>
+    </xacro:macro>
 	<xacro:macro name="little_col_o">
-			<origin xyz="0 0 -${little_l}" rpy="0 0 0"/>
+			<origin xyz="0 0 -${little_distal}" rpy="0 0 0"/>
 	</xacro:macro>
 
     <xacro:macro name="cyan">
@@ -99,8 +138,12 @@
         </material>
     </xacro:macro>
 
-    <xacro:macro name="joint_axis">
+    <xacro:macro name="hand_digit_axis">
         <axis xyz="1 0 0"/>
+    </xacro:macro>
+
+    <xacro:macro name="digit_digit_axis">
+        <axis xyz="0 0 1"/>
     </xacro:macro>
 
     <xacro:macro name="joint_limit">
@@ -118,129 +161,298 @@
         </visual>
     </link>
 
-    <link name="thumb">   
+    <link name="thumb_proximal">
         <visual>
             <geometry>
-                <cylinder length="${thumb_l}" radius="${digit_radius}"/>
+                <cyilnder length="${thumb_proximal}" radius="{thumb_radius}"/>
             </geometry>
-            <xacro:thumb_vis_o/>
+            <xacro:thumb_proximal_vis/>
+            <xacro:cyan/>
+        </visual>
+    </link>
+
+    <link name="thumb_distal">   
+        <visual>
+            <geometry>
+                <cylinder length="${thumb_distal}" radius="${thumb_radius}"/>
+            </geometry>
+            <xacro:thumb_distal_vis/>
             <xacro:cyan/>
         </visual>
 
         <collision>
             <geometry>
-                <sphere radius="${digit_radius}"/>
+                <sphere radius="${thumb_radius}"/>
             </geometry>
             <xacro:thumb_col_o/>
         </collision>
     </link>
 
-    <link name="index">   
+    <link name="index_proximal">
         <visual>
             <geometry>
-                <cylinder length="${index_l}" radius="${digit_radius}"/>
+                <cyilnder length="${index_proximal}" radius="{index_radius}"/>
             </geometry>
-            <xacro:index_vis_o/>
+            <xacro:index_proximal_vis/>
+            <xacro:cyan/>
+        </visual>
+    </link>
+
+    <link name="index_middle">
+        <visual>
+            <geometry>
+                <cyilnder length="${index_middle}" radius="{index_radius}"/>
+            </geometry>
+            <xacro:index_middle_vis/>
+            <xacro:cyan/>
+        </visual>
+    </link>
+
+    <link name="index_distal">   
+        <visual>
+            <geometry>
+                <cylinder length="${index_distal}" radius="${index_radius}"/>
+            </geometry>
+            <xacro:index_distal_vis/>
             <xacro:cyan/>
         </visual>
 
         <collision>
             <geometry>
-                <sphere radius="${digit_radius}"/>
+                <sphere radius="${index_radius}"/>
             </geometry>
             <xacro:index_col_o/>
         </collision>
     </link>
 
-    <link name="middle">   
+    <link name="middle_proximal">
         <visual>
             <geometry>
-                <cylinder length="${middle_l}" radius="${digit_radius}"/>
+                <cyilnder length="${middle_proximal}" radius="{middle_radius}"/>
             </geometry>
-            <xacro:middle_vis_o/>
+            <xacro:middle_proximal_vis/>
+            <xacro:cyan/>
+        </visual>
+    </link>
+
+    <link name="middle_middle">
+        <visual>
+            <geometry>
+                <cyilnder length="${middle_middle}" radius="{middle_radius}"/>
+            </geometry>
+            <xacro:middle_middle_vis/>
+            <xacro:cyan/>
+        </visual>
+    </link>
+
+    <link name="middle_distal">   
+        <visual>
+            <geometry>
+                <cylinder length="${middle_distal}" radius="${middle_radius}"/>
+            </geometry>
+            <xacro:middle_distal_vis/>
             <xacro:cyan/>
         </visual>
 
         <collision>
             <geometry>
-                <sphere radius="${digit_radius}"/>
+                <sphere radius="${middle_radius}"/>
             </geometry>
             <xacro:middle_col_o/>
         </collision>
     </link>
 
-    <link name="ring">   
+    <link name="ring_proximal">
         <visual>
             <geometry>
-                <cylinder length="${ring_l}" radius="${digit_radius}"/>
+                <cyilnder length="${ring_proximal}" radius="{ring_radius}"/>
             </geometry>
-            <xacro:ring_vis_o/>
+            <xacro:ring_proximal_vis/>
+            <xacro:cyan/>
+        </visual>
+    </link>
+
+    <link name="ring_middle">
+        <visual>
+            <geometry>
+                <cyilnder length="${ring_middle}" radius="{ring_radius}"/>
+            </geometry>
+            <xacro:ring_middle_vis/>
+            <xacro:cyan/>
+        </visual>
+    </link>
+
+    <link name="ring_distal">   
+        <visual>
+            <geometry>
+                <cylinder length="${ring_distal}" radius="${ring_radius}"/>
+            </geometry>
+            <xacro:ring_distal_vis/>
             <xacro:cyan/>
         </visual>
 
         <collision>
             <geometry>
-                <sphere radius="${digit_radius}"/>
+                <sphere radius="${ring_radius}"/>
             </geometry>
             <xacro:ring_col_o/>
         </collision>
     </link>
 
-    <link name="little">   
+    <link name="little_proximal">
         <visual>
             <geometry>
-                <cylinder length="${little_l}" radius="${digit_radius}"/>
+                <cyilnder length="${little_proximal}" radius="{little_radius}"/>
             </geometry>
-            <xacro:little_vis_o/>
+            <xacro:little_proximal_vis/>
+            <xacro:cyan/>
+        </visual>
+    </link>
+
+    <link name="little_middle">
+        <visual>
+            <geometry>
+                <cyilnder length="${little_middle}" radius="{little_radius}"/>
+            </geometry>
+            <xacro:little_middle_vis/>
+            <xacro:cyan/>
+        </visual>
+    </link>
+
+    <link name="little_distal">   
+        <visual>
+            <geometry>
+                <cylinder length="${little_distal}" radius="${little_radius}"/>
+            </geometry>
+            <xacro:little_distal_vis/>
             <xacro:cyan/>
         </visual>
 
         <collision>
             <geometry>
-                <sphere radius="${digit_radius}"/>
+                <sphere radius="${little_radius}"/>
             </geometry>
             <xacro:little_col_o/>
         </collision>
     </link>
- 
-    <joint name="thumb_joint" type="revolute">
+
+    <link name="imu"/>
+
+    <joint name="imu_joint" type="floating">
+        <parent link="imu"/>
+        <child link="hand_link"/>
+    </joint>
+
+    <joint name="thumb_mcp" type="revolute">
         <parent link="hand_link"/>
-        <child link="thumb"/>
+        <child link="thumb_proximal"/>
         <axis xyz="0 1 0"/>
         <xacro:joint_limit/>
         <xacro:thumb_o/>
     </joint>
      
-    <joint name="index_joint" type="revolute">
+    <joint name="thumb_ip" type="revolute">
+        <parent link="thumb_proximal"/>
+        <child link="thumb_distal"/>
+        <xacro:digit_digit_axis/>
+        <xacro:joint_limit/>
+        <origin xyz="0 0 ${thumb_proximal}" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="index_mcp" type="revolute">
         <parent link="hand_link"/>
-        <child link="index"/>
-        <xacro:joint_axis/>
+        <child link="index_proximal"/>
+        <xacro:hand_digit_axis/>
         <xacro:joint_limit/>
         <xacro:index_o/>
     </joint>
 
-    <joint name="middle_joint" type="revolute">
+    <joint name="index_pip" type="revolute">
+        <parent link="index_proximal"/>
+        <child link="index_middle"/>
+        <xacro:digit_digit_axis/>
+        <xacro:joint_limit/>
+        <origin xyz="0 0 ${index_proximal}" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="index_dip" type="revolute">
+        <parent link="index_middle"/>
+        <child link="index_distal"/>
+        <xacro:digit_digit_axis/>
+        <xacro:joint_limit/>
+        <origin xyz="0 0 ${index_middle}" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="middle_mcp" type="revolute">
         <parent link="hand_link"/>
-        <child link="middle"/>
-        <xacro:joint_axis/>
+        <child link="middle_proximal"/>
+        <xacro:hand_digit_axis/>
         <xacro:joint_limit/>
         <xacro:middle_o/>
     </joint>
 
-    <joint name="ring_joint" type="revolute">
+    <joint name="middle_pip" type="revolute">
+        <parent link="middle_proximal"/>
+        <child link="middle_middle"/>
+        <xacro:digit_digit_axis/>
+        <xacro:joint_limit/>
+        <origin xyz="0 0 ${middle_proximal}" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="middle_dip" type="revolute">
+        <parent link="middle_middle"/>
+        <child link="middle_distal"/>
+        <xacro:digit_digit_axis/>
+        <xacro:joint_limit/>
+        <origin xyz="0 0 ${middle_middle}" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="ring_mcp" type="revolute">
         <parent link="hand_link"/>
-        <child link="ring"/>
-        <xacro:joint_axis/>
+        <child link="ring_proximal"/>
+        <xacro:hand_digit_axis/>
         <xacro:joint_limit/>
         <xacro:ring_o/>
     </joint>
 
-    <joint name="little_joint" type="revolute">
+    <joint name="ring_pip" type="revolute">
+        <parent link="ring_proximal"/>
+        <child link="ring_middle"/>
+        <xacro:digit_digit_axis/>
+        <xacro:joint_limit/>
+        <origin xyz="0 0 ${ring_proximal}" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="ring_dip" type="revolute">
+        <parent link="ring_middle"/>
+        <child link="ring_distal"/>
+        <xacro:digit_digit_axis/>
+        <xacro:joint_limit/>
+        <origin xyz="0 0 ${ring_middle}" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="little_mcp" type="revolute">
         <parent link="hand_link"/>
-        <child link="little"/>
-        <xacro:joint_axis/>
+        <child link="little_proximal"/>
+        <xacro:hand_digit_axis/>
         <xacro:joint_limit/>
         <xacro:little_o/>
+    </joint>
+
+    <joint name="little_pip" type="revolute">
+        <parent link="little_proximal"/>
+        <child link="little_middle"/>
+        <xacro:digit_digit_axis/>
+        <xacro:joint_limit/>
+        <origin xyz="0 0 ${little_proximal}" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="little_dip" type="revolute">
+        <parent link="little_middle"/>
+        <child link="little_distal"/>
+        <xacro:digit_digit_axis/>
+        <xacro:joint_limit/>
+        <origin xyz="0 0 ${little_middle}" rpy="0 0 0"/>
     </joint>
 
 </robot>

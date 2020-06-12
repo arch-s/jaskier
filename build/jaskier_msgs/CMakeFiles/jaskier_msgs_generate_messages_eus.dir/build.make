@@ -56,6 +56,7 @@ include jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_eus.dir/progress.
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_eus: /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/touchContact.l
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_eus: /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/fingerADC.l
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_eus: /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/handActive.l
+jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_eus: /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/ultraTimeStamp.l
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_eus: /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/manifest.l
 
 
@@ -74,14 +75,20 @@ jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_eus: /home/arch/catkin_ws
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from jaskier_msgs/handActive.msg"
 	cd /home/arch/catkin_ws/build/jaskier_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg -Ijaskier_msgs:/home/arch/catkin_ws/src/jaskier_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p jaskier_msgs -o /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg
 
+/home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/ultraTimeStamp.l: /opt/ros/melodic/lib/geneus/gen_eus.py
+/home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/ultraTimeStamp.l: /home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from jaskier_msgs/ultraTimeStamp.msg"
+	cd /home/arch/catkin_ws/build/jaskier_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg -Ijaskier_msgs:/home/arch/catkin_ws/src/jaskier_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p jaskier_msgs -o /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg
+
 /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/manifest.l: /opt/ros/melodic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp manifest code for jaskier_msgs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp manifest code for jaskier_msgs"
 	cd /home/arch/catkin_ws/build/jaskier_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs jaskier_msgs geometry_msgs sensor_msgs std_msgs
 
 jaskier_msgs_generate_messages_eus: jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_eus
 jaskier_msgs_generate_messages_eus: /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/touchContact.l
 jaskier_msgs_generate_messages_eus: /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/fingerADC.l
 jaskier_msgs_generate_messages_eus: /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/handActive.l
+jaskier_msgs_generate_messages_eus: /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/msg/ultraTimeStamp.l
 jaskier_msgs_generate_messages_eus: /home/arch/catkin_ws/devel/share/roseus/ros/jaskier_msgs/manifest.l
 jaskier_msgs_generate_messages_eus: jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_eus.dir/build.make
 

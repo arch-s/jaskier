@@ -56,6 +56,7 @@ include jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_lisp.dir/progress
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_lisp: /home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/touchContact.lisp
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_lisp: /home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/fingerADC.lisp
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_lisp: /home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/handActive.lisp
+jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_lisp: /home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/ultraTimeStamp.lisp
 
 
 /home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/touchContact.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
@@ -73,10 +74,16 @@ jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_lisp: /home/arch/catkin_w
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from jaskier_msgs/handActive.msg"
 	cd /home/arch/catkin_ws/build/jaskier_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg -Ijaskier_msgs:/home/arch/catkin_ws/src/jaskier_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p jaskier_msgs -o /home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg
 
+/home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/ultraTimeStamp.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
+/home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/ultraTimeStamp.lisp: /home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from jaskier_msgs/ultraTimeStamp.msg"
+	cd /home/arch/catkin_ws/build/jaskier_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg -Ijaskier_msgs:/home/arch/catkin_ws/src/jaskier_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p jaskier_msgs -o /home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg
+
 jaskier_msgs_generate_messages_lisp: jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_lisp
 jaskier_msgs_generate_messages_lisp: /home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/touchContact.lisp
 jaskier_msgs_generate_messages_lisp: /home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/fingerADC.lisp
 jaskier_msgs_generate_messages_lisp: /home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/handActive.lisp
+jaskier_msgs_generate_messages_lisp: /home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/ultraTimeStamp.lisp
 jaskier_msgs_generate_messages_lisp: jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_lisp.dir/build.make
 
 .PHONY : jaskier_msgs_generate_messages_lisp

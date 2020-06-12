@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "/home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/touchContact.lisp"
   "/home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/fingerADC.lisp"
   "/home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/handActive.lisp"
+  "/home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/ultraTimeStamp.lisp"
 )
 
 # Per-language clean rules from dependency scanning.
