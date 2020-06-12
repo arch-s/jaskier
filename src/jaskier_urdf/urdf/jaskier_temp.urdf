@@ -213,7 +213,7 @@
   <joint name="thumb_ip" type="revolute">
     <parent link="thumb_proximal"/>
     <child link="thumb_distal"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="1 0 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
     <origin rpy="0 0 0" xyz="0 0 0.034"/>
   </joint>
@@ -227,16 +227,16 @@
   <joint name="index_pip" type="revolute">
     <parent link="index_proximal"/>
     <child link="index_middle"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="1 0 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
-    <origin rpy="0 0 0" xyz="0 0 0.026"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.026"/>
   </joint>
   <joint name="index_dip" type="revolute">
     <parent link="index_middle"/>
     <child link="index_distal"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="1 0 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
-    <origin rpy="0 0 0" xyz="0 0 0.024"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.024"/>
   </joint>
   <joint name="middle_mcp" type="revolute">
     <parent link="hand_link"/>
@@ -248,16 +248,16 @@
   <joint name="middle_pip" type="revolute">
     <parent link="middle_proximal"/>
     <child link="middle_middle"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="1 0 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
-    <origin rpy="0 0 0" xyz="0 0 0.026"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.026"/>
   </joint>
   <joint name="middle_dip" type="revolute">
     <parent link="middle_middle"/>
     <child link="middle_distal"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="1 0 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
-    <origin rpy="0 0 0" xyz="0 0 0.027"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.027"/>
   </joint>
   <joint name="ring_mcp" type="revolute">
     <parent link="hand_link"/>
@@ -269,16 +269,16 @@
   <joint name="ring_pip" type="revolute">
     <parent link="ring_proximal"/>
     <child link="ring_middle"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="1 0 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
-    <origin rpy="0 0 0" xyz="0 0 0.026"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.026"/>
   </joint>
   <joint name="ring_dip" type="revolute">
     <parent link="ring_middle"/>
     <child link="ring_distal"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="1 0 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
-    <origin rpy="0 0 0" xyz="0 0 0.024"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.024"/>
   </joint>
   <joint name="little_mcp" type="revolute">
     <parent link="hand_link"/>
@@ -290,16 +290,16 @@
   <joint name="little_pip" type="revolute">
     <parent link="little_proximal"/>
     <child link="little_middle"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="1 0 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
-    <origin rpy="0 0 0" xyz="0 0 0.018"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.018"/>
   </joint>
   <joint name="little_dip" type="revolute">
     <parent link="little_middle"/>
     <child link="little_distal"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="1 0 0"/>
     <limit effort="0.0" lower="-1.8" upper="0" velocity="20"/>
-    <origin rpy="0 0 0" xyz="0 0 0.017"/>
+    <origin rpy="0 0 0" xyz="0 0 -0.017"/>
   </joint>
 </robot>
 

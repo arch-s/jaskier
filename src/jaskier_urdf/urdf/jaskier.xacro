@@ -138,12 +138,8 @@
         </material>
     </xacro:macro>
 
-    <xacro:macro name="hand_digit_axis">
+    <xacro:macro name="joint_axis">
         <axis xyz="1 0 0"/>
-    </xacro:macro>
-
-    <xacro:macro name="digit_digit_axis">
-        <axis xyz="0 0 1"/>
     </xacro:macro>
 
     <xacro:macro name="joint_limit">
@@ -354,7 +350,7 @@
     <joint name="thumb_ip" type="revolute">
         <parent link="thumb_proximal"/>
         <child link="thumb_distal"/>
-        <xacro:digit_digit_axis/>
+        <xacro:joint_axis/>
         <xacro:joint_limit/>
         <origin xyz="0 0 ${thumb_proximal}" rpy="0 0 0"/>
     </joint>
@@ -362,7 +358,7 @@
     <joint name="index_mcp" type="revolute">
         <parent link="hand_link"/>
         <child link="index_proximal"/>
-        <xacro:hand_digit_axis/>
+        <xacro:joint_axis/>
         <xacro:joint_limit/>
         <xacro:index_o/>
     </joint>
@@ -370,23 +366,23 @@
     <joint name="index_pip" type="revolute">
         <parent link="index_proximal"/>
         <child link="index_middle"/>
-        <xacro:digit_digit_axis/>
+        <xacro:joint_axis/>
         <xacro:joint_limit/>
-        <origin xyz="0 0 ${index_proximal}" rpy="0 0 0"/>
+        <origin xyz="0 0 -${index_proximal}" rpy="0 0 0"/>
     </joint>
 
     <joint name="index_dip" type="revolute">
         <parent link="index_middle"/>
         <child link="index_distal"/>
-        <xacro:digit_digit_axis/>
+        <xacro:joint_axis/>
         <xacro:joint_limit/>
-        <origin xyz="0 0 ${index_middle}" rpy="0 0 0"/>
+        <origin xyz="0 0 -${index_middle}" rpy="0 0 0"/>
     </joint>
 
     <joint name="middle_mcp" type="revolute">
         <parent link="hand_link"/>
         <child link="middle_proximal"/>
-        <xacro:hand_digit_axis/>
+        <xacro:joint_axis/>
         <xacro:joint_limit/>
         <xacro:middle_o/>
     </joint>
@@ -394,23 +390,23 @@
     <joint name="middle_pip" type="revolute">
         <parent link="middle_proximal"/>
         <child link="middle_middle"/>
-        <xacro:digit_digit_axis/>
+        <xacro:joint_axis/>
         <xacro:joint_limit/>
-        <origin xyz="0 0 ${middle_proximal}" rpy="0 0 0"/>
+        <origin xyz="0 0 -${middle_proximal}" rpy="0 0 0"/>
     </joint>
 
     <joint name="middle_dip" type="revolute">
         <parent link="middle_middle"/>
         <child link="middle_distal"/>
-        <xacro:digit_digit_axis/>
+        <xacro:joint_axis/>
         <xacro:joint_limit/>
-        <origin xyz="0 0 ${middle_middle}" rpy="0 0 0"/>
+        <origin xyz="0 0 -${middle_middle}" rpy="0 0 0"/>
     </joint>
 
     <joint name="ring_mcp" type="revolute">
         <parent link="hand_link"/>
         <child link="ring_proximal"/>
-        <xacro:hand_digit_axis/>
+        <xacro:joint_axis/>
         <xacro:joint_limit/>
         <xacro:ring_o/>
     </joint>
@@ -418,23 +414,23 @@
     <joint name="ring_pip" type="revolute">
         <parent link="ring_proximal"/>
         <child link="ring_middle"/>
-        <xacro:digit_digit_axis/>
+        <xacro:joint_axis/>
         <xacro:joint_limit/>
-        <origin xyz="0 0 ${ring_proximal}" rpy="0 0 0"/>
+        <origin xyz="0 0 -${ring_proximal}" rpy="0 0 0"/>
     </joint>
 
     <joint name="ring_dip" type="revolute">
         <parent link="ring_middle"/>
         <child link="ring_distal"/>
-        <xacro:digit_digit_axis/>
+        <xacro:joint_axis/>
         <xacro:joint_limit/>
-        <origin xyz="0 0 ${ring_middle}" rpy="0 0 0"/>
+        <origin xyz="0 0 -${ring_middle}" rpy="0 0 0"/>
     </joint>
 
     <joint name="little_mcp" type="revolute">
         <parent link="hand_link"/>
         <child link="little_proximal"/>
-        <xacro:hand_digit_axis/>
+        <xacro:joint_axis/>
         <xacro:joint_limit/>
         <xacro:little_o/>
     </joint>
@@ -442,17 +438,17 @@
     <joint name="little_pip" type="revolute">
         <parent link="little_proximal"/>
         <child link="little_middle"/>
-        <xacro:digit_digit_axis/>
+        <xacro:joint_axis/>
         <xacro:joint_limit/>
-        <origin xyz="0 0 ${little_proximal}" rpy="0 0 0"/>
+        <origin xyz="0 0 -${little_proximal}" rpy="0 0 0"/>
     </joint>
 
     <joint name="little_dip" type="revolute">
         <parent link="little_middle"/>
         <child link="little_distal"/>
-        <xacro:digit_digit_axis/>
+        <xacro:joint_axis/>
         <xacro:joint_limit/>
-        <origin xyz="0 0 ${little_middle}" rpy="0 0 0"/>
+        <origin xyz="0 0 -${little_middle}" rpy="0 0 0"/>
     </joint>
 
 </robot>
