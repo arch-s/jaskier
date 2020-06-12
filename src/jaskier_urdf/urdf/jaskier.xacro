@@ -8,7 +8,7 @@
 
     <xacro:property name="thumb_proximal" value="0.034"/>
     <xacro:property name="thumb_distal" value="0.032"/>
-    <xacro:property name="thumb_radius" value="0.017"/>
+    <xacro:property name="thumb_radius" value="0.0085"/>
     <xacro:property name="thumb_o_x" value="-${base_x/2}"/>
     <xacro:property name="thumb_o_y" value="-${base_y/2}"/>
     <xacro:property name="thumb_o_r" value="0.9"/>
@@ -31,7 +31,7 @@
     <xacro:property name="index_proximal" value="0.026"/>
     <xacro:property name="index_middle" value="0.024"/>
     <xacro:property name="index_distal" value="0.026"/>
-    <xacro:property name="index_radius" value="0.013"/>
+    <xacro:property name="index_radius" value="0.0065"/>
     <xacro:property name="index_o_x" value="-${base_x/2}"/>
     <xacro:property name="index_o_y" value="${base_y/2}"/>
     <xacro:property name="index_o_r" value="${pi/2}"/>
@@ -57,7 +57,7 @@
     <xacro:property name="middle_proximal" value="0.026"/>
     <xacro:property name="middle_middle" value="0.027"/>
     <xacro:property name="middle_distal" value="0.027"/>
-    <xacro:property name="middle_radius" value="0.014"/>
+    <xacro:property name="middle_radius" value="0.007"/>
 	<xacro:property name="middle_o_x" value="-${base_x/6}"/>
     <xacro:property name="middle_o_y" value="${base_y/2}"/>
     <xacro:property name="middle_o_r" value="${pi/2}"/>
@@ -83,7 +83,7 @@
     <xacro:property name="ring_proximal" value="0.026"/>
     <xacro:property name="ring_middle" value="0.024"/>
     <xacro:property name="ring_distal" value="0.027"/>
-    <xacro:property name="ring_radius" value="0.013"/>
+    <xacro:property name="ring_radius" value="0.0065"/>
     <xacro:property name="ring_o_x" value="${base_x/6}"/>
     <xacro:property name="ring_o_y" value="${base_y/2}"/>
     <xacro:property name="ring_o_r" value="${pi/2}"/>
@@ -109,7 +109,7 @@
     <xacro:property name="little_proximal" value="0.018"/>
     <xacro:property name="little_middle" value="0.017"/>
     <xacro:property name="little_distal" value="0.025"/>
-    <xacro:property name="little_radius" value="0.012"/>
+    <xacro:property name="little_radius" value="0.006"/>
     <xacro:property name="little_o_x" value="${base_x/2}"/>
     <xacro:property name="little_o_y" value="${base_y/2}"/>
     <xacro:property name="little_o_r" value="${pi/2}"/>
@@ -164,7 +164,7 @@
     <link name="thumb_proximal">
         <visual>
             <geometry>
-                <cyilnder length="${thumb_proximal}" radius="{thumb_radius}"/>
+                <cylinder length="${thumb_proximal}" radius="{thumb_radius}"/>
             </geometry>
             <xacro:thumb_proximal_vis/>
             <xacro:cyan/>
@@ -191,7 +191,7 @@
     <link name="index_proximal">
         <visual>
             <geometry>
-                <cyilnder length="${index_proximal}" radius="{index_radius}"/>
+                <cylinder length="${index_proximal}" radius="{index_radius}"/>
             </geometry>
             <xacro:index_proximal_vis/>
             <xacro:cyan/>
@@ -201,7 +201,7 @@
     <link name="index_middle">
         <visual>
             <geometry>
-                <cyilnder length="${index_middle}" radius="{index_radius}"/>
+                <cylinder length="${index_middle}" radius="{index_radius}"/>
             </geometry>
             <xacro:index_middle_vis/>
             <xacro:cyan/>
@@ -228,7 +228,7 @@
     <link name="middle_proximal">
         <visual>
             <geometry>
-                <cyilnder length="${middle_proximal}" radius="{middle_radius}"/>
+                <cylinder length="${middle_proximal}" radius="{middle_radius}"/>
             </geometry>
             <xacro:middle_proximal_vis/>
             <xacro:cyan/>
@@ -238,7 +238,7 @@
     <link name="middle_middle">
         <visual>
             <geometry>
-                <cyilnder length="${middle_middle}" radius="{middle_radius}"/>
+                <cylinder length="${middle_middle}" radius="{middle_radius}"/>
             </geometry>
             <xacro:middle_middle_vis/>
             <xacro:cyan/>
@@ -265,7 +265,7 @@
     <link name="ring_proximal">
         <visual>
             <geometry>
-                <cyilnder length="${ring_proximal}" radius="{ring_radius}"/>
+                <cylinder length="${ring_proximal}" radius="{ring_radius}"/>
             </geometry>
             <xacro:ring_proximal_vis/>
             <xacro:cyan/>
@@ -275,7 +275,7 @@
     <link name="ring_middle">
         <visual>
             <geometry>
-                <cyilnder length="${ring_middle}" radius="{ring_radius}"/>
+                <cylinder length="${ring_middle}" radius="{ring_radius}"/>
             </geometry>
             <xacro:ring_middle_vis/>
             <xacro:cyan/>
@@ -302,7 +302,7 @@
     <link name="little_proximal">
         <visual>
             <geometry>
-                <cyilnder length="${little_proximal}" radius="{little_radius}"/>
+                <cylinder length="${little_proximal}" radius="{little_radius}"/>
             </geometry>
             <xacro:little_proximal_vis/>
             <xacro:cyan/>
@@ -312,7 +312,7 @@
     <link name="little_middle">
         <visual>
             <geometry>
-                <cyilnder length="${little_middle}" radius="{little_radius}"/>
+                <cylinder length="${little_middle}" radius="{little_radius}"/>
             </geometry>
             <xacro:little_middle_vis/>
             <xacro:cyan/>
