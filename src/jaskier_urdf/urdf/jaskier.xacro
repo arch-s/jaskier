@@ -164,7 +164,7 @@
     <link name="thumb_proximal">
         <visual>
             <geometry>
-                <cylinder length="${thumb_proximal}" radius="{thumb_radius}"/>
+                <cylinder length="${thumb_proximal}" radius="${thumb_radius}"/>
             </geometry>
             <xacro:thumb_proximal_vis/>
             <xacro:cyan/>
@@ -191,7 +191,7 @@
     <link name="index_proximal">
         <visual>
             <geometry>
-                <cylinder length="${index_proximal}" radius="{index_radius}"/>
+                <cylinder length="${index_proximal}" radius="${index_radius}"/>
             </geometry>
             <xacro:index_proximal_vis/>
             <xacro:cyan/>
@@ -201,7 +201,7 @@
     <link name="index_middle">
         <visual>
             <geometry>
-                <cylinder length="${index_middle}" radius="{index_radius}"/>
+                <cylinder length="${index_middle}" radius="${index_radius}"/>
             </geometry>
             <xacro:index_middle_vis/>
             <xacro:cyan/>
@@ -228,7 +228,7 @@
     <link name="middle_proximal">
         <visual>
             <geometry>
-                <cylinder length="${middle_proximal}" radius="{middle_radius}"/>
+                <cylinder length="${middle_proximal}" radius="${middle_radius}"/>
             </geometry>
             <xacro:middle_proximal_vis/>
             <xacro:cyan/>
@@ -238,7 +238,7 @@
     <link name="middle_middle">
         <visual>
             <geometry>
-                <cylinder length="${middle_middle}" radius="{middle_radius}"/>
+                <cylinder length="${middle_middle}" radius="${middle_radius}"/>
             </geometry>
             <xacro:middle_middle_vis/>
             <xacro:cyan/>
@@ -265,7 +265,7 @@
     <link name="ring_proximal">
         <visual>
             <geometry>
-                <cylinder length="${ring_proximal}" radius="{ring_radius}"/>
+                <cylinder length="${ring_proximal}" radius="${ring_radius}"/>
             </geometry>
             <xacro:ring_proximal_vis/>
             <xacro:cyan/>
@@ -302,7 +302,7 @@
     <link name="little_proximal">
         <visual>
             <geometry>
-                <cylinder length="${little_proximal}" radius="{little_radius}"/>
+                <cylinder length="${little_proximal}" radius="${little_radius}"/>
             </geometry>
             <xacro:little_proximal_vis/>
             <xacro:cyan/>
@@ -312,7 +312,7 @@
     <link name="little_middle">
         <visual>
             <geometry>
-                <cylinder length="${little_middle}" radius="{little_radius}"/>
+                <cylinder length="${little_middle}" radius="${little_radius}"/>
             </geometry>
             <xacro:little_middle_vis/>
             <xacro:cyan/>
