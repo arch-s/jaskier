@@ -275,7 +275,7 @@
     <link name="ring_middle">
         <visual>
             <geometry>
-                <cylinder length="${ring_middle}" radius="{ring_radius}"/>
+                <cylinder length="${ring_middle}" radius="${ring_radius}"/>
             </geometry>
             <xacro:ring_middle_vis/>
             <xacro:cyan/>

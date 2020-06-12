@@ -134,7 +134,7 @@
   <link name="ring_middle">
     <visual>
       <geometry>
-        <cylinder length="0.024" radius="{ring_radius}"/>
+        <cylinder length="0.024" radius="0.0065"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 -0.012"/>
       <material name="cyan">
