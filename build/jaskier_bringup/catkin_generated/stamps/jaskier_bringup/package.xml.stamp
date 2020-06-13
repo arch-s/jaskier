@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>jaskier_bringup</name>
+  <version>0.0.0</version>
+  <description>The jaskier_bringup package</description>
+  <maintainer email="arch@todo.todo">arch</maintainer>
+
+  <license>MIT</license>
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

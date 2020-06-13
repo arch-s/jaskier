@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import FaBo9Axis_MPU9250 as Fabo
 import time
 import sys

@@ -1,0 +1,68 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"ultra_z_link" [label="ultra_z_link"];
+"ultra_y_link" [label="ultra_y_link"];
+"ultra_x_link" [label="ultra_x_link"];
+"imu_z_link" [label="imu_z_link"];
+"imu_y_link" [label="imu_y_link"];
+"imu_x_link" [label="imu_x_link"];
+"hand_link" [label="hand_link"];
+"index_proximal" [label="index_proximal"];
+"index_middle" [label="index_middle"];
+"index_distal" [label="index_distal"];
+"little_proximal" [label="little_proximal"];
+"little_middle" [label="little_middle"];
+"little_distal" [label="little_distal"];
+"middle_proximal" [label="middle_proximal"];
+"middle_middle" [label="middle_middle"];
+"middle_distal" [label="middle_distal"];
+"ring_proximal" [label="ring_proximal"];
+"ring_middle" [label="ring_middle"];
+"ring_distal" [label="ring_distal"];
+"thumb_proximal" [label="thumb_proximal"];
+"thumb_distal" [label="thumb_distal"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "base_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"base_joint" -> "ultra_z_link"
+"ultra_z_link" -> "ultra_z" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"ultra_z" -> "ultra_y_link"
+"ultra_y_link" -> "ultra_y" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"ultra_y" -> "ultra_x_link"
+"ultra_x_link" -> "ultra_x" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"ultra_x" -> "imu_z_link"
+"imu_z_link" -> "imu_z" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"imu_z" -> "imu_y_link"
+"imu_y_link" -> "imu_y" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"imu_y" -> "imu_x_link"
+"imu_x_link" -> "imu_x" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"imu_x" -> "hand_link"
+"hand_link" -> "index_mcp" [label="xyz: -0.0425 0.0305 0 \nrpy: 1.5708 -0 0"]
+"index_mcp" -> "index_proximal"
+"index_proximal" -> "index_pip" [label="xyz: 0 0 -0.026 \nrpy: 0 -0 0"]
+"index_pip" -> "index_middle"
+"index_middle" -> "index_dip" [label="xyz: 0 0 -0.024 \nrpy: 0 -0 0"]
+"index_dip" -> "index_distal"
+"hand_link" -> "little_mcp" [label="xyz: 0.0425 0.0305 0 \nrpy: 1.5708 -0 0"]
+"little_mcp" -> "little_proximal"
+"little_proximal" -> "little_pip" [label="xyz: 0 0 -0.018 \nrpy: 0 -0 0"]
+"little_pip" -> "little_middle"
+"little_middle" -> "little_dip" [label="xyz: 0 0 -0.017 \nrpy: 0 -0 0"]
+"little_dip" -> "little_distal"
+"hand_link" -> "middle_mcp" [label="xyz: -0.0141667 0.0305 0 \nrpy: 1.5708 -0 0"]
+"middle_mcp" -> "middle_proximal"
+"middle_proximal" -> "middle_pip" [label="xyz: 0 0 -0.026 \nrpy: 0 -0 0"]
+"middle_pip" -> "middle_middle"
+"middle_middle" -> "middle_dip" [label="xyz: 0 0 -0.027 \nrpy: 0 -0 0"]
+"middle_dip" -> "middle_distal"
+"hand_link" -> "ring_mcp" [label="xyz: 0.0141667 0.0305 0 \nrpy: 1.5708 -0 0"]
+"ring_mcp" -> "ring_proximal"
+"ring_proximal" -> "ring_pip" [label="xyz: 0 0 -0.026 \nrpy: 0 -0 0"]
+"ring_pip" -> "ring_middle"
+"ring_middle" -> "ring_dip" [label="xyz: 0 0 -0.024 \nrpy: 0 -0 0"]
+"ring_dip" -> "ring_distal"
+"hand_link" -> "thumb_mcp" [label="xyz: -0.0425 -0.0305 -0.02 \nrpy: 0.9 0.6 -4.00069e-17"]
+"thumb_mcp" -> "thumb_proximal"
+"thumb_proximal" -> "thumb_ip" [label="xyz: 0 0 -0.034 \nrpy: 0 -0 0"]
+"thumb_ip" -> "thumb_distal"
+}

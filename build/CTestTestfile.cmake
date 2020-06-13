@@ -5,14 +5,15 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+subdirs("jaskier_bringup")
 subdirs("octomap_mapping/octomap_mapping")
-subdirs("jaskier_imu")
 subdirs("jaskier_msgs")
 subdirs("jaskier_fingers")
 subdirs("jaskier_haptic")
 subdirs("jaskier_master")
 subdirs("jaskier_ultrasound")
 subdirs("octomap_mapping/octomap_server")
+subdirs("jaskier_imu")
 subdirs("jaskier_joint_state")
 subdirs("jaskier_urdf")
 subdirs("jaskier_collision")

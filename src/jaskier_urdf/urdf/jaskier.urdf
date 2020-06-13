@@ -224,16 +224,19 @@
     <parent link="ultra_x_link"/>
     <child link="imu_z_link"/>
     <axis xyz="1 0 0"/>
+    <limit effort="0.0" lower="-20" upper="20" velocity="20"/>
   </joint>
   <joint name="ultra_y" type="prismatic">
     <parent link="ultra_y_link"/>
     <child link="ultra_x_link"/>
     <axis xyz="0 1 0"/>
+    <limit effort="0.0" lower="-20" upper="20" velocity="20"/>
   </joint>
   <joint name="ultra_z" type="prismatic">
     <parent link="ultra_z_link"/>
     <child link="ultra_y_link"/>
     <axis xyz="0 0 1"/>
+    <limit effort="0.0" lower="-20" upper="20" velocity="20"/>
   </joint>
   <joint name="base_joint" type="fixed">
     <parent link="base_link"/>

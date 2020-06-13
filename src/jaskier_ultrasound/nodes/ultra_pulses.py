@@ -31,11 +31,11 @@ def pulseGenerate(rate):
     msg.stamp = [tx_time]*5
 
     for x in range(PULSE_NUM*2):
-        GPIO.output(RX, pin_val)
+        GPIO.output(TX, pin_val)
         pin_val = 1 - pin_val
         rate.sleep()
 
-    GPIO.output(RX, GPIO.LOW)
+    GPIO.output(TX, GPIO.LOW)
 
 def main():
 
@@ -48,15 +48,15 @@ def main():
     GPIO.setup(RX4, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
     #detect rising edge on rx pins and assign callbacks
-    GPIO.add_event_detect(RX1, GPIO.RISING, callback=lambda x: updateTimeStamps(1))
-    GPIO.add_event_detect(RX2, GPIO.RISING, callback=lambda x: updateTimeStamps(2))
-    GPIO.add_event_detect(RX3, GPIO.RISING, callback=lambda x: updateTimeStamps(3))
-    GPIO.add_event_detect(RX4, GPIO.RISING, callback=lambda x: updateTimeStamps(4))
+    GPIO.add_event_detect(RX1, GPIO.RISING, callback=lambda x: updateTimeStamp(1))
+    GPIO.add_event_detect(RX2, GPIO.RISING, callback=lambda x: updateTimeStamp(2))
+    GPIO.add_event_detect(RX3, GPIO.RISING, callback=lambda x: updateTimeStamp(3))
+    GPIO.add_event_detect(RX4, GPIO.RISING, callback=lambda x: updateTimeStamp(4))
 
     rospy.init_node("ultrasound_tx")
     rospy.on_shutdown(cleanGPIO)
     pub = rospy.Publisher("/ultrasound/timestamps", ultraTimeStamp, queue_size=10)
-    ultra_rate = rospy.Rate(40000)
+    ultra_rate = rospy.Rate(80000)
     main_rate = rospy.Rate(100)
 
     print("ultrasound transmitter node online")

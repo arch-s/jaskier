@@ -21,6 +21,7 @@ class localisation:
         self.pub = rospy.Publisher("/ultrasound/coordinates", Point, queue_size=10)
         self.addAnchors()
         self.t, self.label = self.p.add_target()
+        self.addMeasures()
 
     def addAnchors(self):
         self.p.add_anchor("rx1", self.rx1)
@@ -36,19 +37,24 @@ class localisation:
 
     def callback(self, data):
         msg = Point()
-        tx_time = data[0]
-        self.t.measures[0] = ("rx1", self.distance(tx_time, data[1]))
-        self.t.measures[1] = ("rx2", self.distance(tx_time, data[2]))
-        self.t.measures[2] = ("rx3", self.distance(tx_time, data[3]))
-        self.t.measures[3] = ("rx4", self.distance(tx_time, data[4]))
+        tx_time = data.stamp[0]
+        self.t.measures[0] = ("rx1", self.distance(tx_time, data.stamp[1]))
+        self.t.measures[1] = ("rx2", self.distance(tx_time, data.stamp[2]))
+        self.t.measures[2] = ("rx3", self.distance(tx_time, data.stamp[3]))
+        self.t.measures[3] = ("rx4", self.distance(tx_time, data.stamp[4]))
         self.p.solve()
         msg.x = self.t.loc.x
         msg.y = self.t.loc.y
         msg.z = self.t.loc.z
         self.pub.publish(msg)
 
-    def distance(tx_time, rx_time):
-        return ((rx_time.to_sec() - tx_time.to_sec()) * SPEED_OF_SOUND)
+    def distance(self, tx_time, rx_time):
+        temp = tx_time.to_sec() -tx_time.to_sec()
+        if temp == 0:
+            return 0.01
+        else:
+            return temp*SPEED_SOUND
+        #return ((rx_time.to_sec() - tx_time.to_sec()) * SPEED_SOUND)
 
     def listener(self):
         rospy.init_node("ultrasound_localistion")
