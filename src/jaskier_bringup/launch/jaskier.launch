@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="finger_adc" pkg="jaskier_fingers" type="read_adc.py" output="screen"/>
+    <node name="ultrasound_tx" pkg="jaskier_ultrasound" type="ultra_pulses.py" output="screen"/>
+    <node name="ultrasound_localisation" pkg="jaskier_ultrasound" type="ultra_coordinates.py"/>
+    <node name="mpu_publisher" pkg="jaskier_imu" type="read_imu.py" output="screen"/>
+    <node name="ImuFilter" pkg="imu_filter_madgwick" type="imu_filter_node"/>
+    <node name="joint_state_publisher" pkg="jaskier_joint_state" type="joint_publisher.py" output="screen"/>
+    <include file="$(find jaskier_joint_state)/launch/spawn_jaskier.launch"/>
+</launch>
