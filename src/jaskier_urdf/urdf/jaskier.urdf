@@ -198,10 +198,46 @@
       <origin rpy="0 0 0" xyz="0 0 -0.025"/>
     </collision>
   </link>
-  <link name="imu"/>
-  <joint name="imu_joint" type="floating">
-    <parent link="imu"/>
+  <link name="imu_x_link"/>
+  <link name="imu_y_link"/>
+  <link name="imu_z_link"/>
+  <link name="ultra_x_link"/>
+  <link name="ultra_y_link"/>
+  <link name="ultra_z_link"/>
+  <link name="base_link"/>
+  <joint name="imu_x" type="continuous">
+    <parent link="imu_x_link"/>
     <child link="hand_link"/>
+    <axis xyz="1 0 0"/>
+  </joint>
+  <joint name="imu_y" type="continuous">
+    <parent link="imu_y_link"/>
+    <child link="imu_x_link"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <joint name="imu_z" type="continuous">
+    <parent link="imu_z_link"/>
+    <child link="imu_y_link"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="ultra_x" type="prismatic">
+    <parent link="ultra_x_link"/>
+    <child link="imu_z_link"/>
+    <axis xyz="1 0 0"/>
+  </joint>
+  <joint name="ultra_y" type="prismatic">
+    <parent link="ultra_y_link"/>
+    <child link="ultra_x_link"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <joint name="ultra_z" type="prismatic">
+    <parent link="ultra_z_link"/>
+    <child link="ultra_y_link"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <joint name="base_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="ultra_z_link"/>
   </joint>
   <joint name="thumb_mcp" type="revolute">
     <parent link="hand_link"/>
