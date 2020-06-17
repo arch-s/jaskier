@@ -5,3 +5,7 @@
 [submodule "src/zed-ros-examples"]
     path = src/zed-ros-examples
     url = git://github.com/stereolabs/zed-ros-examples
+    
+[submodule "src/octomap_mapping"]
+    path = src/octomap_mapping
+    url = git://github.com/OctoMap/octomap_mapping
