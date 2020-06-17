@@ -7,15 +7,16 @@ import struct
 
 
 class touchContact(genpy.Message):
-  _md5sum = "d41d8cd98f00b204e9800998ecf8427e"
+  _md5sum = "3aae430fea1916af49e822715e516338"
   _type = "jaskier_msgs/touchContact"
-  _has_header = False #flag to mark the presence of a Header object
+  _has_header = False  # flag to mark the presence of a Header object
   _full_text = """# Indicates which fingertips are touching and the proximity of the contact
 
-# TODO: determine how to store finger touch data
+float64[5] distance
+float64 thresh
 """
-  __slots__ = []
-  _slot_types = []
+  __slots__ = ['distance','thresh']
+  _slot_types = ['float64[5]','float64']
 
   def __init__(self, *args, **kwds):
     """
@@ -25,7 +26,7 @@ class touchContact(genpy.Message):
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       
+       distance,thresh
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -33,6 +34,14 @@ class touchContact(genpy.Message):
     """
     if args or kwds:
       super(touchContact, self).__init__(*args, **kwds)
+      # message fields cannot be None, assign default values for those that are
+      if self.distance is None:
+        self.distance = [0.] * 5
+      if self.thresh is None:
+        self.thresh = 0.
+    else:
+      self.distance = [0.] * 5
+      self.thresh = 0.
 
   def _get_types(self):
     """
@@ -46,7 +55,9 @@ class touchContact(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      pass
+      buff.write(_get_struct_5d().pack(*self.distance))
+      _x = self.thresh
+      buff.write(_get_struct_d().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -57,9 +68,15 @@ class touchContact(genpy.Message):
     """
     try:
       end = 0
+      start = end
+      end += 40
+      self.distance = _get_struct_5d().unpack(str[start:end])
+      start = end
+      end += 8
+      (self.thresh,) = _get_struct_d().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 
   def serialize_numpy(self, buff, numpy):
@@ -69,7 +86,9 @@ class touchContact(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      pass
+      buff.write(self.distance.tostring())
+      _x = self.thresh
+      buff.write(_get_struct_d().pack(_x))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -81,11 +100,29 @@ class touchContact(genpy.Message):
     """
     try:
       end = 0
+      start = end
+      end += 40
+      self.distance = numpy.frombuffer(str[start:end], dtype=numpy.float64, count=5)
+      start = end
+      end += 8
+      (self.thresh,) = _get_struct_d().unpack(str[start:end])
       return self
     except struct.error as e:
-      raise genpy.DeserializationError(e) #most likely buffer underfill
+      raise genpy.DeserializationError(e)  # most likely buffer underfill
 
 _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
+_struct_5d = None
+def _get_struct_5d():
+    global _struct_5d
+    if _struct_5d is None:
+        _struct_5d = struct.Struct("<5d")
+    return _struct_5d
+_struct_d = None
+def _get_struct_d():
+    global _struct_d
+    if _struct_d is None:
+        _struct_d = struct.Struct("<d")
+    return _struct_d

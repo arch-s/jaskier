@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-
 import sys
 import rospy
 import moveit_commander
@@ -18,9 +17,6 @@ class collisionDetector:
         self.rs = RobotState()
         self.rs.joint_state.name = ["thumb_joint", "index_joint", "middle_joint", "ring_joint", "little_joint"]
         self.rs.joint_state.position = [0.0, 0.0, 0.0, 0.0, 0.0]
-        
-    def callback(self, msg):
-        
 
 def main():
     rospy.init_node("collision_detector")

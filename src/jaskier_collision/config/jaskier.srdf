@@ -9,29 +9,176 @@
     <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
     <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="thumb">
+        <joint name="virtual_joint" />
+        <joint name="base_joint" />
+        <joint name="ultra_z" />
+        <joint name="ultra_y" />
+        <joint name="ultra_x" />
+        <joint name="imu_z" />
+        <joint name="imu_y" />
+        <joint name="imu_x" />
+        <joint name="thumb_mcp" />
+        <joint name="thumb_ip" />
+    </group>
+    <group name="index">
+        <joint name="virtual_joint" />
+        <joint name="base_joint" />
+        <joint name="ultra_z" />
+        <joint name="ultra_y" />
+        <joint name="ultra_x" />
+        <joint name="imu_z" />
+        <joint name="imu_y" />
+        <joint name="imu_x" />
+        <joint name="index_mcp" />
+        <joint name="index_pip" />
+        <joint name="index_dip" />
+    </group>
+    <group name="middle">
+        <joint name="virtual_joint" />
+        <joint name="base_joint" />
+        <joint name="ultra_z" />
+        <joint name="ultra_y" />
+        <joint name="ultra_x" />
+        <joint name="imu_z" />
+        <joint name="imu_y" />
+        <joint name="imu_x" />
+        <joint name="middle_mcp" />
+        <joint name="middle_pip" />
+        <joint name="middle_dip" />
+    </group>
+    <group name="ring">
+        <joint name="virtual_joint" />
+        <joint name="base_joint" />
+        <joint name="ultra_z" />
+        <joint name="ultra_y" />
+        <joint name="ultra_x" />
+        <joint name="imu_z" />
+        <joint name="imu_y" />
+        <joint name="imu_x" />
+        <joint name="ring_mcp" />
+        <joint name="ring_pip" />
+        <joint name="ring_dip" />
+    </group>
+    <group name="little">
+        <joint name="virtual_joint" />
+        <joint name="base_joint" />
+        <joint name="ultra_z" />
+        <joint name="ultra_y" />
+        <joint name="ultra_x" />
+        <joint name="imu_z" />
+        <joint name="imu_y" />
+        <joint name="imu_x" />
+        <joint name="little_mcp" />
+        <joint name="little_pip" />
+        <joint name="little_dip" />
+    </group>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
-    <virtual_joint name="virtual_joint" type="floating" parent_frame="odom" child_link="hand_link" />
-    <!--PASSIVE JOINT: Purpose: this element is used to mark joints that are not actuated-->
-    <passive_joint name="virtual_joint" />
-    <passive_joint name="index_joint" />
-    <passive_joint name="little_joint" />
-    <passive_joint name="middle_joint" />
-    <passive_joint name="ring_joint" />
-    <passive_joint name="thumb_joint" />
+    <virtual_joint name="virtual_joint" type="fixed" parent_frame="map" child_link="base_link" />
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
-    <disable_collisions link1="hand_link" link2="index" reason="Adjacent" />
-    <disable_collisions link1="hand_link" link2="little" reason="Adjacent" />
-    <disable_collisions link1="hand_link" link2="middle" reason="Adjacent" />
-    <disable_collisions link1="hand_link" link2="ring" reason="Adjacent" />
-    <disable_collisions link1="hand_link" link2="thumb" reason="Adjacent" />
-    <disable_collisions link1="index" link2="little" reason="Never" />
-    <disable_collisions link1="index" link2="middle" reason="Never" />
-    <disable_collisions link1="index" link2="ring" reason="Never" />
-    <disable_collisions link1="index" link2="thumb" reason="Never" />
-    <disable_collisions link1="little" link2="middle" reason="Never" />
-    <disable_collisions link1="little" link2="ring" reason="Never" />
-    <disable_collisions link1="little" link2="thumb" reason="Never" />
-    <disable_collisions link1="middle" link2="ring" reason="Never" />
-    <disable_collisions link1="middle" link2="thumb" reason="Never" />
-    <disable_collisions link1="ring" link2="thumb" reason="Never" />
+    <disable_collisions link1="hand_link" link2="index_distal" reason="User" />
+    <disable_collisions link1="hand_link" link2="index_middle" reason="User" />
+    <disable_collisions link1="hand_link" link2="index_proximal" reason="Adjacent" />
+    <disable_collisions link1="hand_link" link2="little_distal" reason="User" />
+    <disable_collisions link1="hand_link" link2="little_middle" reason="User" />
+    <disable_collisions link1="hand_link" link2="little_proximal" reason="Adjacent" />
+    <disable_collisions link1="hand_link" link2="middle_distal" reason="User" />
+    <disable_collisions link1="hand_link" link2="middle_middle" reason="User" />
+    <disable_collisions link1="hand_link" link2="middle_proximal" reason="Adjacent" />
+    <disable_collisions link1="hand_link" link2="ring_distal" reason="User" />
+    <disable_collisions link1="hand_link" link2="ring_middle" reason="User" />
+    <disable_collisions link1="hand_link" link2="ring_proximal" reason="Adjacent" />
+    <disable_collisions link1="hand_link" link2="thumb_distal" reason="Never" />
+    <disable_collisions link1="hand_link" link2="thumb_proximal" reason="Adjacent" />
+    <disable_collisions link1="index_distal" link2="index_middle" reason="Adjacent" />
+    <disable_collisions link1="index_distal" link2="index_proximal" reason="User" />
+    <disable_collisions link1="index_distal" link2="little_distal" reason="Never" />
+    <disable_collisions link1="index_distal" link2="little_middle" reason="Never" />
+    <disable_collisions link1="index_distal" link2="little_proximal" reason="Never" />
+    <disable_collisions link1="index_distal" link2="middle_distal" reason="Never" />
+    <disable_collisions link1="index_distal" link2="middle_middle" reason="Never" />
+    <disable_collisions link1="index_distal" link2="middle_proximal" reason="Never" />
+    <disable_collisions link1="index_distal" link2="ring_distal" reason="Never" />
+    <disable_collisions link1="index_distal" link2="ring_middle" reason="Never" />
+    <disable_collisions link1="index_distal" link2="ring_proximal" reason="Never" />
+    <disable_collisions link1="index_distal" link2="thumb_distal" reason="User" />
+    <disable_collisions link1="index_distal" link2="thumb_proximal" reason="User" />
+    <disable_collisions link1="index_middle" link2="index_proximal" reason="Adjacent" />
+    <disable_collisions link1="index_middle" link2="little_distal" reason="Never" />
+    <disable_collisions link1="index_middle" link2="little_middle" reason="Never" />
+    <disable_collisions link1="index_middle" link2="little_proximal" reason="Never" />
+    <disable_collisions link1="index_middle" link2="middle_distal" reason="Never" />
+    <disable_collisions link1="index_middle" link2="middle_middle" reason="Never" />
+    <disable_collisions link1="index_middle" link2="middle_proximal" reason="Never" />
+    <disable_collisions link1="index_middle" link2="ring_distal" reason="Never" />
+    <disable_collisions link1="index_middle" link2="ring_middle" reason="Never" />
+    <disable_collisions link1="index_middle" link2="ring_proximal" reason="Never" />
+    <disable_collisions link1="index_middle" link2="thumb_distal" reason="Never" />
+    <disable_collisions link1="index_middle" link2="thumb_proximal" reason="Never" />
+    <disable_collisions link1="index_proximal" link2="little_distal" reason="Never" />
+    <disable_collisions link1="index_proximal" link2="little_middle" reason="Never" />
+    <disable_collisions link1="index_proximal" link2="little_proximal" reason="Never" />
+    <disable_collisions link1="index_proximal" link2="middle_distal" reason="Never" />
+    <disable_collisions link1="index_proximal" link2="middle_middle" reason="Never" />
+    <disable_collisions link1="index_proximal" link2="middle_proximal" reason="Never" />
+    <disable_collisions link1="index_proximal" link2="ring_distal" reason="Never" />
+    <disable_collisions link1="index_proximal" link2="ring_middle" reason="Never" />
+    <disable_collisions link1="index_proximal" link2="ring_proximal" reason="Never" />
+    <disable_collisions link1="index_proximal" link2="thumb_distal" reason="Never" />
+    <disable_collisions link1="index_proximal" link2="thumb_proximal" reason="Never" />
+    <disable_collisions link1="little_distal" link2="little_middle" reason="Adjacent" />
+    <disable_collisions link1="little_distal" link2="little_proximal" reason="Never" />
+    <disable_collisions link1="little_distal" link2="middle_distal" reason="Never" />
+    <disable_collisions link1="little_distal" link2="middle_middle" reason="Never" />
+    <disable_collisions link1="little_distal" link2="middle_proximal" reason="Never" />
+    <disable_collisions link1="little_distal" link2="ring_distal" reason="Never" />
+    <disable_collisions link1="little_distal" link2="ring_middle" reason="Never" />
+    <disable_collisions link1="little_distal" link2="ring_proximal" reason="Never" />
+    <disable_collisions link1="little_distal" link2="thumb_distal" reason="Never" />
+    <disable_collisions link1="little_distal" link2="thumb_proximal" reason="Never" />
+    <disable_collisions link1="little_middle" link2="little_proximal" reason="Adjacent" />
+    <disable_collisions link1="little_middle" link2="middle_distal" reason="Never" />
+    <disable_collisions link1="little_middle" link2="middle_middle" reason="Never" />
+    <disable_collisions link1="little_middle" link2="middle_proximal" reason="Never" />
+    <disable_collisions link1="little_middle" link2="ring_distal" reason="Never" />
+    <disable_collisions link1="little_middle" link2="ring_middle" reason="Never" />
+    <disable_collisions link1="little_middle" link2="ring_proximal" reason="Never" />
+    <disable_collisions link1="little_middle" link2="thumb_distal" reason="Never" />
+    <disable_collisions link1="little_middle" link2="thumb_proximal" reason="Never" />
+    <disable_collisions link1="little_proximal" link2="middle_distal" reason="Never" />
+    <disable_collisions link1="little_proximal" link2="middle_middle" reason="Never" />
+    <disable_collisions link1="little_proximal" link2="middle_proximal" reason="Never" />
+    <disable_collisions link1="little_proximal" link2="ring_distal" reason="Never" />
+    <disable_collisions link1="little_proximal" link2="ring_middle" reason="Never" />
+    <disable_collisions link1="little_proximal" link2="ring_proximal" reason="Never" />
+    <disable_collisions link1="little_proximal" link2="thumb_distal" reason="Never" />
+    <disable_collisions link1="little_proximal" link2="thumb_proximal" reason="Never" />
+    <disable_collisions link1="middle_distal" link2="middle_middle" reason="Adjacent" />
+    <disable_collisions link1="middle_distal" link2="middle_proximal" reason="Never" />
+    <disable_collisions link1="middle_distal" link2="ring_distal" reason="Never" />
+    <disable_collisions link1="middle_distal" link2="ring_middle" reason="Never" />
+    <disable_collisions link1="middle_distal" link2="ring_proximal" reason="Never" />
+    <disable_collisions link1="middle_distal" link2="thumb_distal" reason="User" />
+    <disable_collisions link1="middle_distal" link2="thumb_proximal" reason="User" />
+    <disable_collisions link1="middle_middle" link2="middle_proximal" reason="Adjacent" />
+    <disable_collisions link1="middle_middle" link2="ring_distal" reason="Never" />
+    <disable_collisions link1="middle_middle" link2="ring_middle" reason="Never" />
+    <disable_collisions link1="middle_middle" link2="ring_proximal" reason="Never" />
+    <disable_collisions link1="middle_middle" link2="thumb_distal" reason="Never" />
+    <disable_collisions link1="middle_middle" link2="thumb_proximal" reason="Never" />
+    <disable_collisions link1="middle_proximal" link2="ring_distal" reason="Never" />
+    <disable_collisions link1="middle_proximal" link2="ring_middle" reason="Never" />
+    <disable_collisions link1="middle_proximal" link2="ring_proximal" reason="Never" />
+    <disable_collisions link1="middle_proximal" link2="thumb_distal" reason="Never" />
+    <disable_collisions link1="middle_proximal" link2="thumb_proximal" reason="Never" />
+    <disable_collisions link1="ring_distal" link2="ring_middle" reason="Adjacent" />
+    <disable_collisions link1="ring_distal" link2="ring_proximal" reason="User" />
+    <disable_collisions link1="ring_distal" link2="thumb_distal" reason="User" />
+    <disable_collisions link1="ring_distal" link2="thumb_proximal" reason="Never" />
+    <disable_collisions link1="ring_middle" link2="ring_proximal" reason="Adjacent" />
+    <disable_collisions link1="ring_middle" link2="thumb_distal" reason="Never" />
+    <disable_collisions link1="ring_middle" link2="thumb_proximal" reason="Never" />
+    <disable_collisions link1="ring_proximal" link2="thumb_distal" reason="Never" />
+    <disable_collisions link1="ring_proximal" link2="thumb_proximal" reason="Never" />
+    <disable_collisions link1="thumb_distal" link2="thumb_proximal" reason="Adjacent" />
 </robot>

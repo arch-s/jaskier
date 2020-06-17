@@ -24,14 +24,24 @@ struct touchContact_
   typedef touchContact_<ContainerAllocator> Type;
 
   touchContact_()
-    {
-    }
+    : distance()
+    , thresh(0.0)  {
+      distance.assign(0.0);
+  }
   touchContact_(const ContainerAllocator& _alloc)
-    {
+    : distance()
+    , thresh(0.0)  {
   (void)_alloc;
-    }
+      distance.assign(0.0);
+  }
 
 
+
+   typedef boost::array<double, 5>  _distance_type;
+  _distance_type distance;
+
+   typedef double _thresh_type;
+  _thresh_type thresh;
 
 
 
@@ -56,6 +66,20 @@ std::ostream& operator<<(std::ostream& s, const ::jaskier_msgs::touchContact_<Co
 {
 ros::message_operations::Printer< ::jaskier_msgs::touchContact_<ContainerAllocator> >::stream(s, "", v);
 return s;
+}
+
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::jaskier_msgs::touchContact_<ContainerAllocator1> & lhs, const ::jaskier_msgs::touchContact_<ContainerAllocator2> & rhs)
+{
+  return lhs.distance == rhs.distance &&
+    lhs.thresh == rhs.thresh;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::jaskier_msgs::touchContact_<ContainerAllocator1> & lhs, const ::jaskier_msgs::touchContact_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
 }
 
 
@@ -106,12 +130,12 @@ struct MD5Sum< ::jaskier_msgs::touchContact_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "d41d8cd98f00b204e9800998ecf8427e";
+    return "3aae430fea1916af49e822715e516338";
   }
 
   static const char* value(const ::jaskier_msgs::touchContact_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xd41d8cd98f00b204ULL;
-  static const uint64_t static_value2 = 0xe9800998ecf8427eULL;
+  static const uint64_t static_value1 = 0x3aae430fea1916afULL;
+  static const uint64_t static_value2 = 0x49e822715e516338ULL;
 };
 
 template<class ContainerAllocator>
@@ -132,7 +156,8 @@ struct Definition< ::jaskier_msgs::touchContact_<ContainerAllocator> >
   {
     return "# Indicates which fingertips are touching and the proximity of the contact\n"
 "\n"
-"# TODO: determine how to store finger touch data\n"
+"float64[5] distance\n"
+"float64 thresh\n"
 ;
   }
 
@@ -149,8 +174,11 @@ namespace serialization
 
   template<class ContainerAllocator> struct Serializer< ::jaskier_msgs::touchContact_<ContainerAllocator> >
   {
-    template<typename Stream, typename T> inline static void allInOne(Stream&, T)
-    {}
+    template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
+    {
+      stream.next(m.distance);
+      stream.next(m.thresh);
+    }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
   }; // struct touchContact_
@@ -166,8 +194,17 @@ namespace message_operations
 template<class ContainerAllocator>
 struct Printer< ::jaskier_msgs::touchContact_<ContainerAllocator> >
 {
-  template<typename Stream> static void stream(Stream&, const std::string&, const ::jaskier_msgs::touchContact_<ContainerAllocator>&)
-  {}
+  template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::jaskier_msgs::touchContact_<ContainerAllocator>& v)
+  {
+    s << indent << "distance[]" << std::endl;
+    for (size_t i = 0; i < v.distance.size(); ++i)
+    {
+      s << indent << "  distance[" << i << "]: ";
+      Printer<double>::stream(s, indent + "  ", v.distance[i]);
+    }
+    s << indent << "thresh: ";
+    Printer<double>::stream(s, indent + "  ", v.thresh);
+  }
 };
 
 } // namespace message_operations

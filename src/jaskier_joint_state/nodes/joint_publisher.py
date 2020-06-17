@@ -21,7 +21,7 @@ class jointPublisher:
         self.msg = JointState()
         self.msg.header.stamp = 0
         self.msg.name = ["thumb_mcp", "index_mcp", "middle_mcp", "ring_mcp", "little_mcp", "thumb_ip", "index_pip", "index_dip", "middle_pip", "middle_dip", "ring_pip", "ring_dip", "little_pip", "little_dip", "imu_x", "imu_y", "imu_z", "ultra_x", "ultra_y", "ultra_z"]
-        self.msg.position = [None]*len(self.msg.name)
+        self.msg.position = [0]*len(self.msg.name)
         self.msg.velocity = []
         self.msg.effort = []
 
@@ -81,8 +81,11 @@ class jointPublisher:
         rospy.Subscriber("/fingers", fingerADC, self.fingerCallback)
         rospy.Subscriber("/imu/data", Imu, self.imuCallback)
         rospy.Subscriber("/ultrasound/coordinates", Point, self.ultraCallback)
+        r = rospy.Rate(100)
         while not rospy.is_shutdown():
-            rospy.spin()
+            self.msg.header.stamp = rospy.Time.now()
+            self.pub.publish(self.msg)
+            r.sleep()
        
 
 def main():

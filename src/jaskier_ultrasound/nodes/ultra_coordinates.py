@@ -5,9 +5,11 @@ import localization as lc
 from geometry_msgs.msg import Point
 from jaskier_msgs.msg import ultraTimeStamp
 
+# receiver coordinates
+
 RX1_X, RX1_Y, RX1_Z = 0.085, 0.13, 0.0
 RX2_X, RX2_Y, RX2_Z = 0.085, -0.13, 0.0
-RX3_X, RX3_Y, RX3_Z = -0.085, 0.13, 0.0
+RX3_X, RX3_Y, RX3_Z = -0.085, 0.13, 0.007
 RX4_X, RX4_Y, RX4_Z = -0.085, -0.13, 0.0
 SPEED_SOUND = 343
 
@@ -24,18 +26,27 @@ class localisation:
         self.addMeasures()
 
     def addAnchors(self):
+        '''
+        add receivers to localization project
+        '''
         self.p.add_anchor("rx1", self.rx1)
         self.p.add_anchor("rx2", self.rx2)
         self.p.add_anchor("rx3", self.rx3)
         self.p.add_anchor("rx4", self.rx4)
 
     def addMeasures(self):
+        '''
+        initialise distances associated with each receiver
+        '''
         self.t.add_measure("rx1", 0)
         self.t.add_measure("rx2", 0)
         self.t.add_measure("rx3", 0)
         self.t.add_measure("rx4", 0)
 
     def callback(self, data):
+        '''
+        publish hand coords from most recent timing information
+        '''
         msg = Point()
         tx_time = data.stamp[0]
         self.t.measures[0] = ("rx1", self.distance(tx_time, data.stamp[1]))
@@ -54,7 +65,6 @@ class localisation:
             return 0.01
         else:
             return temp*SPEED_SOUND
-        #return ((rx_time.to_sec() - tx_time.to_sec()) * SPEED_SOUND)
 
     def listener(self):
         rospy.init_node("ultrasound_localistion")

@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/arch/catkin_ws/src/jaskier_msgs/msg/fingerADC.msg;/home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg;/home/arch/catkin_ws/src/jaskier_msgs/msg/touchContact.msg;/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg"
+messages_str = "/home/arch/catkin_ws/src/jaskier_msgs/msg/fingerADC.msg;/home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg;/home/arch/catkin_ws/src/jaskier_msgs/msg/touchContact.msg;/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg;/home/arch/catkin_ws/src/jaskier_msgs/msg/tipCoords.msg"
 services_str = ""
 pkg_name = "jaskier_msgs"
 dependencies_str = "geometry_msgs;sensor_msgs;std_msgs"

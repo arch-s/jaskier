@@ -1,12 +1,58 @@
 controller_list:
-  - name: fake_hand_controller
+  - name: fake_thumb_controller
     joints:
-      - virtual_joint
-      - index_joint
-      - little_joint
-      - middle_joint
-      - ring_joint
-      - thumb_joint
+      - ultra_z
+      - ultra_y
+      - ultra_x
+      - imu_z
+      - imu_y
+      - imu_x
+      - thumb_mcp
+      - thumb_ip
+  - name: fake_index_controller
+    joints:
+      - ultra_z
+      - ultra_y
+      - ultra_x
+      - imu_z
+      - imu_y
+      - imu_x
+      - index_mcp
+      - index_pip
+      - index_dip
+  - name: fake_middle_controller
+    joints:
+      - ultra_z
+      - ultra_y
+      - ultra_x
+      - imu_z
+      - imu_y
+      - imu_x
+      - middle_mcp
+      - middle_pip
+      - middle_dip
+  - name: fake_ring_controller
+    joints:
+      - ultra_z
+      - ultra_y
+      - ultra_x
+      - imu_z
+      - imu_y
+      - imu_x
+      - ring_mcp
+      - ring_pip
+      - ring_dip
+  - name: fake_little_controller
+    joints:
+      - ultra_z
+      - ultra_y
+      - ultra_x
+      - imu_z
+      - imu_y
+      - imu_x
+      - little_mcp
+      - little_pip
+      - little_dip
 initial:  # Define initial robot poses.
-#  - group: hand
+#  - group: thumb
 #    pose: home

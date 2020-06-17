@@ -1,2 +1,6 @@
 (cl:in-package jaskier_msgs-msg)
-(cl:export '())
+(cl:export '(DISTANCE-VAL
+          DISTANCE
+          THRESH-VAL
+          THRESH
+))

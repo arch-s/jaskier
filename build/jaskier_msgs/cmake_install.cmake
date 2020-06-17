@@ -43,6 +43,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     "/home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg"
     "/home/arch/catkin_ws/src/jaskier_msgs/msg/touchContact.msg"
     "/home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg"
+    "/home/arch/catkin_ws/src/jaskier_msgs/msg/tipCoords.msg"
     )
 endif()
 

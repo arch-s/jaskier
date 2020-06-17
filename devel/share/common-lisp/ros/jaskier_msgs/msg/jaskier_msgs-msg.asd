@@ -8,6 +8,8 @@
     (:file "_package_fingerADC" :depends-on ("_package"))
     (:file "handActive" :depends-on ("_package_handActive"))
     (:file "_package_handActive" :depends-on ("_package"))
+    (:file "tipCoords" :depends-on ("_package_tipCoords"))
+    (:file "_package_tipCoords" :depends-on ("_package"))
     (:file "touchContact" :depends-on ("_package_touchContact"))
     (:file "_package_touchContact" :depends-on ("_package"))
     (:file "ultraTimeStamp" :depends-on ("_package_ultraTimeStamp"))

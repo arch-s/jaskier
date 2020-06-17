@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/jaskier_msgs_generate_messages_lisp"
   "/home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/touchContact.lisp"
   "/home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/fingerADC.lisp"
+  "/home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/tipCoords.lisp"
   "/home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/handActive.lisp"
   "/home/arch/catkin_ws/devel/share/common-lisp/ros/jaskier_msgs/msg/ultraTimeStamp.lisp"
 )

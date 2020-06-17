@@ -55,6 +55,7 @@ include jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_py.dir/progress.m
 
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_touchContact.py
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_fingerADC.py
+jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_tipCoords.py
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_handActive.py
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_ultraTimeStamp.py
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/__init__.py
@@ -70,27 +71,34 @@ jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_py: /home/arch/catkin_ws/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG jaskier_msgs/fingerADC"
 	cd /home/arch/catkin_ws/build/jaskier_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/arch/catkin_ws/src/jaskier_msgs/msg/fingerADC.msg -Ijaskier_msgs:/home/arch/catkin_ws/src/jaskier_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p jaskier_msgs -o /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg
 
+/home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_tipCoords.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_tipCoords.py: /home/arch/catkin_ws/src/jaskier_msgs/msg/tipCoords.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG jaskier_msgs/tipCoords"
+	cd /home/arch/catkin_ws/build/jaskier_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/arch/catkin_ws/src/jaskier_msgs/msg/tipCoords.msg -Ijaskier_msgs:/home/arch/catkin_ws/src/jaskier_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p jaskier_msgs -o /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg
+
 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_handActive.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_handActive.py: /home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG jaskier_msgs/handActive"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG jaskier_msgs/handActive"
 	cd /home/arch/catkin_ws/build/jaskier_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg -Ijaskier_msgs:/home/arch/catkin_ws/src/jaskier_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p jaskier_msgs -o /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg
 
 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_ultraTimeStamp.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_ultraTimeStamp.py: /home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG jaskier_msgs/ultraTimeStamp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python from MSG jaskier_msgs/ultraTimeStamp"
 	cd /home/arch/catkin_ws/build/jaskier_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg -Ijaskier_msgs:/home/arch/catkin_ws/src/jaskier_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p jaskier_msgs -o /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg
 
 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/__init__.py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_touchContact.py
 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/__init__.py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_fingerADC.py
+/home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/__init__.py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_tipCoords.py
 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/__init__.py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_handActive.py
 /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/__init__.py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_ultraTimeStamp.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for jaskier_msgs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python msg __init__.py for jaskier_msgs"
 	cd /home/arch/catkin_ws/build/jaskier_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg --initpy
 
 jaskier_msgs_generate_messages_py: jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_py
 jaskier_msgs_generate_messages_py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_touchContact.py
 jaskier_msgs_generate_messages_py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_fingerADC.py
+jaskier_msgs_generate_messages_py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_tipCoords.py
 jaskier_msgs_generate_messages_py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_handActive.py
 jaskier_msgs_generate_messages_py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/_ultraTimeStamp.py
 jaskier_msgs_generate_messages_py: /home/arch/catkin_ws/devel/lib/python2.7/dist-packages/jaskier_msgs/msg/__init__.py

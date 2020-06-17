@@ -9,12 +9,26 @@ generic_hw_control_loop:
 # Settings for ros_control hardware interface
 hardware_interface:
   joints:
-    - virtual_joint
-    - index_joint
-    - little_joint
-    - middle_joint
-    - ring_joint
-    - thumb_joint
+    - ultra_z
+    - ultra_y
+    - ultra_x
+    - imu_z
+    - imu_y
+    - imu_x
+    - index_mcp
+    - index_pip
+    - index_dip
+    - little_mcp
+    - little_pip
+    - little_dip
+    - middle_mcp
+    - middle_pip
+    - middle_dip
+    - ring_mcp
+    - ring_pip
+    - ring_dip
+    - thumb_mcp
+    - thumb_ip
   sim_control_mode: 1  # 0: position, 1: velocity
 # Publish all joint states
 # Creates the /joint_states topic necessary in ROS

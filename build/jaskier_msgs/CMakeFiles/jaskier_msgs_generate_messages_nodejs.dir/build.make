@@ -55,6 +55,7 @@ include jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_nodejs.dir/progre
 
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_nodejs: /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/touchContact.js
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_nodejs: /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/fingerADC.js
+jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_nodejs: /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/tipCoords.js
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_nodejs: /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/handActive.js
 jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_nodejs: /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/ultraTimeStamp.js
 
@@ -69,19 +70,25 @@ jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_nodejs: /home/arch/catkin
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from jaskier_msgs/fingerADC.msg"
 	cd /home/arch/catkin_ws/build/jaskier_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/arch/catkin_ws/src/jaskier_msgs/msg/fingerADC.msg -Ijaskier_msgs:/home/arch/catkin_ws/src/jaskier_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p jaskier_msgs -o /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg
 
+/home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/tipCoords.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/tipCoords.js: /home/arch/catkin_ws/src/jaskier_msgs/msg/tipCoords.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from jaskier_msgs/tipCoords.msg"
+	cd /home/arch/catkin_ws/build/jaskier_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/arch/catkin_ws/src/jaskier_msgs/msg/tipCoords.msg -Ijaskier_msgs:/home/arch/catkin_ws/src/jaskier_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p jaskier_msgs -o /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg
+
 /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/handActive.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
 /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/handActive.js: /home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from jaskier_msgs/handActive.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from jaskier_msgs/handActive.msg"
 	cd /home/arch/catkin_ws/build/jaskier_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/arch/catkin_ws/src/jaskier_msgs/msg/handActive.msg -Ijaskier_msgs:/home/arch/catkin_ws/src/jaskier_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p jaskier_msgs -o /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg
 
 /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/ultraTimeStamp.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
 /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/ultraTimeStamp.js: /home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from jaskier_msgs/ultraTimeStamp.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/arch/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from jaskier_msgs/ultraTimeStamp.msg"
 	cd /home/arch/catkin_ws/build/jaskier_msgs && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/arch/catkin_ws/src/jaskier_msgs/msg/ultraTimeStamp.msg -Ijaskier_msgs:/home/arch/catkin_ws/src/jaskier_msgs/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p jaskier_msgs -o /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg
 
 jaskier_msgs_generate_messages_nodejs: jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_nodejs
 jaskier_msgs_generate_messages_nodejs: /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/touchContact.js
 jaskier_msgs_generate_messages_nodejs: /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/fingerADC.js
+jaskier_msgs_generate_messages_nodejs: /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/tipCoords.js
 jaskier_msgs_generate_messages_nodejs: /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/handActive.js
 jaskier_msgs_generate_messages_nodejs: /home/arch/catkin_ws/devel/share/gennodejs/ros/jaskier_msgs/msg/ultraTimeStamp.js
 jaskier_msgs_generate_messages_nodejs: jaskier_msgs/CMakeFiles/jaskier_msgs_generate_messages_nodejs.dir/build.make
